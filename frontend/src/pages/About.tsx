@@ -19,7 +19,7 @@ export default function About() {
   const TICKER_TRACK = [...TICKER_ITEMS, ...TICKER_ITEMS, ...TICKER_ITEMS];
 
   return (
-    <article style={{ background: 'var(--white)' }}>
+    <article style={{ background: 'var(--white)' }} className="animate-fade-in-up animate-delay-1">
       
       {/* ── 1. SWISS TYPOGRAPHY HERO ──────────────────────────── */}
       <section style={{ paddingTop: '160px', paddingBottom: '80px', textAlign: 'center', background: 'var(--gray-50)' }}>

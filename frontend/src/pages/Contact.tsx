@@ -47,7 +47,7 @@ function ContactForm() {
 
 export default function Contact() {
   return (
-    <article className="brutalist-section" style={{ background: 'var(--gray-50)', minHeight: '100vh', padding: '120px 0' }}>
+    <article className="brutalist-section animate-fade-in-up animate-delay-1" style={{ background: 'var(--gray-50)', minHeight: '100vh', padding: '120px 0' }}>
       <div className="container">
         <div className="responsive-grid-auto" style={{ alignItems: 'start' }}>
           

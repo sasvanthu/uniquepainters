@@ -4,11 +4,11 @@ import Header  from './components/Header';
 import Footer  from './components/Footer';
 import Home    from './pages/Home';
 import About   from './pages/About';
-import Services from './pages/Services';
 import Interior from './pages/services/Interior';
 import Exterior from './pages/services/Exterior';
 import Commercial from './pages/services/Commercial';
 import Waterproofing from './pages/services/Waterproofing';
+import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 
 /** Scroll to the top of the page or to a hash anchor on every navigation */
@@ -53,11 +53,11 @@ export default function App() {
         <Routes>
           <Route path="/"        element={<Home />} />
           <Route path="/about"   element={<About />} />
-          <Route path="/services" element={<Services />} />
           <Route path="/services/interior" element={<Interior />} />
           <Route path="/services/exterior" element={<Exterior />} />
           <Route path="/services/commercial" element={<Commercial />} />
           <Route path="/services/waterproofing" element={<Waterproofing />} />
+          <Route path="/faq"     element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </main>

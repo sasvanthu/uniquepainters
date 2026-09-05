@@ -50,6 +50,7 @@ export default function Header() {
             </div>
 
             <Link to="/about"   className={navClass('/about')}>About Us</Link>
+            <Link to="/faq"     className={navClass('/faq')}>FAQ</Link>
             <Link to="/contact" className={navClass('/contact')}>Contact</Link>
           </nav>
 
@@ -81,8 +82,15 @@ export default function Header() {
       {/* Mobile Nav Drawer */}
       <nav className={`mobile-nav${mobileOpen ? ' open' : ''}`} aria-label="Mobile navigation">
         <Link to="/"        className="nav-link">Home</Link>
-        <Link to="/services" className="nav-link">Services</Link>
+        <div className="nav-link" style={{ paddingBottom: '4px', cursor: 'default' }}>Services:</div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', paddingLeft: '24px', marginBottom: '16px' }}>
+          <Link to="/services/interior" className="nav-link" style={{ fontSize: '1.2rem', padding: '4px 0' }}>Interior Painting</Link>
+          <Link to="/services/exterior" className="nav-link" style={{ fontSize: '1.2rem', padding: '4px 0' }}>Exterior Painting</Link>
+          <Link to="/services/commercial" className="nav-link" style={{ fontSize: '1.2rem', padding: '4px 0' }}>Commercial Painting</Link>
+          <Link to="/services/waterproofing" className="nav-link" style={{ fontSize: '1.2rem', padding: '4px 0' }}>Waterproofing</Link>
+        </div>
         <Link to="/about"   className="nav-link">About Us</Link>
+        <Link to="/faq"     className="nav-link">FAQ</Link>
         <Link to="/contact" className="nav-link">Contact</Link>
         <div style={{ marginTop: '20px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
           <a href="tel:+917338882034"       className="btn btn-orange btn-full">📞 Call +91 73388 82034</a>
