@@ -69,28 +69,8 @@ export default function Home() {
 
       {/* ── 1. SPLIT HERO ─────────────────────────────────────── */}
       <section className="split-hero" aria-label="Audience Portal">
-        {/* Left Side: Residential */}
+        {/* Left Side: Commercial */}
         <div className="split-side split-left">
-          <div className="split-content">
-            <div className="split-eyebrow">For Homes &amp; Apartments</div>
-            <h1 className="split-title">Complete Residential Painting</h1>
-            <p className="split-desc">
-              Transform your living space with our premium interior, exterior, and waterproofing services. Perfect finishes, dust-free execution.
-            </p>
-            <Link to="/services/interior" className="btn-pill btn-black" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
-              Residential Services <IconArrowRight />
-            </Link>
-          </div>
-          <img 
-            src="https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?q=80&w=800&auto=format&fit=crop" 
-            alt="Residential Painting"
-            className="split-image" 
-            style={{ borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
-          />
-        </div>
-
-        {/* Right Side: Commercial */}
-        <div className="split-side split-right">
           <div className="split-content">
             <div className="split-eyebrow" style={{ color: '#FFD400' }}>For Businesses &amp; Contractors</div>
             <h1 className="split-title">Expert Commercial Painting</h1>
@@ -106,6 +86,26 @@ export default function Home() {
             alt="Commercial Painting"
             className="split-image" 
             style={{ borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}
+          />
+        </div>
+
+        {/* Right Side: Residential */}
+        <div className="split-side split-right">
+          <div className="split-content">
+            <div className="split-eyebrow">For Homes &amp; Apartments</div>
+            <h1 className="split-title">Complete Residential Painting</h1>
+            <p className="split-desc">
+              Transform your living space with our premium interior, exterior, and waterproofing services. Perfect finishes, dust-free execution.
+            </p>
+            <Link to="/services/interior" className="btn-pill btn-black" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              Residential Services <IconArrowRight />
+            </Link>
+          </div>
+          <img 
+            src="https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?q=80&w=800&auto=format&fit=crop" 
+            alt="Residential Painting"
+            className="split-image" 
+            style={{ borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
           />
         </div>
 

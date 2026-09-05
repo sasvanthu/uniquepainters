@@ -1116,49 +1116,34 @@ h1,h2,h3,h4,h5,h6 {
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 60%;
+  left: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 80px 5%;
   transition: clip-path 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s;
   z-index: 1;
 }
 
 .split-left {
-  left: 0;
   background: #E2E4E8;
   color: var(--blue-900);
-  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%);
+  clip-path: polygon(0 0, 60% 0, 40% 100%, 0 100%);
   align-items: flex-start;
   text-align: left;
+  padding: 80px 45% 80px 10%;
 }
 
 .split-right {
-  right: 0;
   background: var(--blue-900);
   color: var(--white);
-  clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(60% 0, 100% 0, 100% 100%, 40% 100%);
   align-items: flex-end;
   text-align: right;
+  padding: 80px 10% 80px 45%;
 }
 
-/* Hover Expansions */
-.split-hero:has(.split-left:hover) .split-left {
-  clip-path: polygon(0 0, 100% 0, 85% 100%, 0 100%);
-  z-index: 2;
-}
-.split-hero:has(.split-left:hover) .split-right {
-  clip-path: polygon(35% 0, 100% 0, 100% 100%, 10% 100%);
-}
-
-.split-hero:has(.split-right:hover) .split-right {
-  clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
-  z-index: 2;
-}
-.split-hero:has(.split-right:hover) .split-left {
-  clip-path: polygon(0 0, 90% 0, 65% 100%, 0 100%);
-}
+/* Removed Hover Expansions for a fixed center slash */
 
 .split-content {
   max-width: 500px;
@@ -1200,8 +1185,8 @@ h1,h2,h3,h4,h5,h6 {
   z-index: 2;
   transition: transform 0.4s;
 }
-.split-left .split-image { right: 10%; transform: translateX(20px); }
-.split-right .split-image { left: 10%; transform: translateX(-20px); }
+.split-left .split-image { right: 50%; transform: translateX(-40px); }
+.split-right .split-image { left: 50%; transform: translateX(40px); }
 
 .split-left:hover .split-image { transform: translateX(0) scale(1.05); }
 .split-right:hover .split-image { transform: translateX(0) scale(1.05); }
