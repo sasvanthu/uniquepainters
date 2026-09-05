@@ -67,7 +67,7 @@ export default function Exterior() {
       <section className="brutalist-section block-white" style={{ padding: '100px 0' }}>
         <div className="container">
           <h2 className="text-huge" style={{ marginBottom: '48px' }}>Our Exterior Process</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
+          <div className="responsive-grid-auto">
             {[
               { t: 'High-Pressure Wash', d: 'Removing dirt, algae, and loose paint using high-pressure water jets for a clean surface.' },
               { t: 'Crack & Leak Seal', d: 'Filling exterior wall cracks with specialized crack-fill compounds and sealants.' },

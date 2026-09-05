@@ -67,7 +67,7 @@ export default function Interior() {
       <section className="brutalist-section block-white" style={{ padding: '100px 0' }}>
         <div className="container">
           <h2 className="text-huge" style={{ marginBottom: '48px' }}>Our Interior Process</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
+          <div className="responsive-grid-auto">
             {[
               { t: 'Surface Preparation', d: 'Scraping old loose paint, applying premium putty, and sanding for an ultra-smooth base.' },
               { t: 'Primer Coat', d: 'Applying a high-quality interior primer to ensure strong adhesion and true colour reflection.' },

@@ -67,7 +67,7 @@ export default function Waterproofing() {
       <section className="brutalist-section block-white" style={{ padding: '100px 0' }}>
         <div className="container">
           <h2 className="text-huge" style={{ marginBottom: '48px' }}>Our Waterproofing Process</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
+          <div className="responsive-grid-auto">
             {[
               { t: 'Leak Diagnostics', d: 'Using moisture meters and visual inspection to identify exactly where water is penetrating.' },
               { t: 'Surface Preparation', d: 'Grinding the surface and opening up cracks in a V-groove to allow deep chemical penetration.' },

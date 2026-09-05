@@ -12,7 +12,7 @@ function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} noValidate style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))', gap: '32px' }}>
+      <div className="responsive-grid-auto">
         <div>
           <label htmlFor="c-name" style={{ display: 'block', fontSize: '1.25rem', fontWeight: 800, marginBottom: '12px', color: 'var(--white)' }}>Your Name *</label>
           <input id="c-name" name="name" type="text" placeholder="Full name" required style={{ width: '100%', padding: '20px', border: 'none', borderRadius: '8px', fontSize: '1.25rem', fontWeight: 600, background: 'rgba(255,255,255,0.1)', color: 'var(--white)' }} />
@@ -47,12 +47,12 @@ function ContactForm() {
 
 export default function Contact() {
   return (
-    <article style={{ background: 'var(--gray-50)', minHeight: '100vh', padding: '120px 0' }}>
+    <article className="brutalist-section" style={{ background: 'var(--gray-50)', minHeight: '100vh', padding: '120px 0' }}>
       <div className="container">
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))', gap: '60px', alignItems: 'start' }}>
+        <div className="responsive-grid-auto" style={{ alignItems: 'start' }}>
           
           {/* LEFT COLUMN: HERO & CONTACT DETAILS */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '48px', position: 'sticky', top: '120px' }}>
+          <div className="sticky-desktop" style={{ display: 'flex', flexDirection: 'column', gap: '48px' }}>
             
             <div>
               <div style={{ display: 'inline-block', border: 'var(--brutalist-border)', padding: '8px 16px', borderRadius: '50px', fontWeight: 800, marginBottom: '24px', background: 'var(--white)' }}>
@@ -67,22 +67,22 @@ export default function Contact() {
               </p>
             </div>
 
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '32px' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
               <div style={{ background: '#FFD400', border: 'var(--brutalist-border)', padding: '32px', boxShadow: '8px 8px 0 var(--blue-900)' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '16px' }}>Phone</h3>
-                <a href="https://wa.me/917338882034" target="_blank" rel="noreferrer" style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--blue-900)', textDecoration: 'none' }}>
-                  +91 73388<br/>82034
+                <a href="https://wa.me/917338882034" target="_blank" rel="noreferrer" style={{ fontSize: 'clamp(1.2rem, 5vw, 1.5rem)', fontWeight: 800, color: 'var(--blue-900)', textDecoration: 'none' }}>
+                  +91 73388 82034
                 </a>
               </div>
               
               <div style={{ background: 'var(--white)', border: 'var(--brutalist-border)', padding: '32px', boxShadow: '8px 8px 0 var(--orange-500)' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '16px' }}>Email</h3>
-                <a href="mailto:sritherss.s@gmail.com" style={{ fontSize: '1.5rem', fontWeight: 800, color: 'var(--blue-900)', textDecoration: 'none', wordBreak: 'break-all' }}>
-                  sritherss.s<br/>@gmail.com
+                <a href="mailto:sritherss.s@gmail.com" style={{ fontSize: 'clamp(1.2rem, 5vw, 1.5rem)', fontWeight: 800, color: 'var(--blue-900)', textDecoration: 'none', wordBreak: 'break-all' }}>
+                  sritherss.s@gmail.com
                 </a>
               </div>
 
-              <div style={{ gridColumn: '1 / -1', background: 'var(--white)', border: 'var(--brutalist-border)', padding: '32px', boxShadow: '8px 8px 0 var(--blue-900)' }}>
+              <div style={{ background: 'var(--white)', border: 'var(--brutalist-border)', padding: '32px', boxShadow: '8px 8px 0 var(--blue-900)' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '16px' }}>Head Office</h3>
                 <address style={{ fontSize: '1.25rem', fontWeight: 700, fontStyle: 'normal', lineHeight: 1.6, color: 'var(--blue-900)' }}>
                   No:12/460, Thiruverkadu Road, Vanagaram,<br/>

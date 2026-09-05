@@ -27,9 +27,11 @@ export default function Commercial() {
           </div>
         </div>
         {/* Decorative Graphic */}
+        <img src="https://images.unsplash.com/photo-1541888079633-5c74263599ee?w=600&q=80" alt="Commercial Deco 1" className="hide-on-mobile" style={{ position: 'absolute', top: '-40px', right: '10%', width: '150px', height: '150px', objectFit: 'cover', border: '4px solid var(--white)', borderRadius: '50%', transform: 'rotate(10deg)', zIndex: 0 }} />
         <img 
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop" 
           alt="Commercial Painting Chennai"
+          className="hide-on-mobile"
           style={{
             position: 'absolute', right: '-10%', bottom: '-20%', width: '700px', height: '700px', 
             objectFit: 'cover', borderRadius: '50%', border: '4px solid var(--blue-900)',
@@ -67,7 +69,7 @@ export default function Commercial() {
       <section className="brutalist-section block-white" style={{ padding: '100px 0' }}>
         <div className="container">
           <h2 className="text-huge" style={{ marginBottom: '48px' }}>Our Commercial Process</h2>
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
+          <div className="responsive-grid-auto">
             {[
               { t: 'Site Evaluation', d: 'Detailed assessment of the commercial space to determine the correct industrial-grade coatings needed.' },
               { t: 'Logistics Planning', d: 'Scheduling work in phases and arranging safe material storage to avoid business disruption.' },
