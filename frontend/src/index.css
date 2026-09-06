@@ -2421,34 +2421,88 @@ h6 {
   .split-side {
     position: relative;
     width: 100%;
-    height: 60vh;
-    min-height: 500px;
+    height: auto !important;
+    min-height: auto !important;
     clip-path: none !important;
     text-align: center;
     align-items: center;
+    justify-content: center !important;
+    padding: 100px 24px !important;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
   }
 
-  .split-left {
-    clip-path: none;
-  }
-
-  .split-right {
+  .split-left, .split-right {
     clip-path: none;
   }
 
   .split-image {
-    position: relative;
-    height: 250px;
-    margin-top: 40px;
-    bottom: auto;
+    position: relative !important;
+    width: 90% !important;
+    max-width: 400px;
+    height: auto !important;
+    aspect-ratio: 16/10;
+    margin: 0 auto !important;
+    bottom: auto !important;
     right: auto !important;
     left: auto !important;
+    top: auto !important;
     transform: none !important;
   }
 
   .split-medallion {
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width: 120px !important;
+    height: 120px !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+  .mobile-break {
+    display: block !important;
+    content: '';
+    margin-top: 12px;
+  }
+
+  .hero-service-img {
+    position: relative !important;
+    width: 90% !important;
+    max-width: 400px !important;
+    height: auto !important;
+    opacity: 1 !important;
+    bottom: auto !important;
+    right: auto !important;
+    margin-top: 32px !important;
+    z-index: 1 !important;
+    border-radius: 20px !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .text-massive {
+    line-height: 1.4 !important;
+  }
+
+  .accent-circle {
+    margin-top: 12px;
+  }
+
+  .accent-circle::before {
+    width: 105%;
+    height: 115%;
+    border-width: 3px;
+  }
+
+  .contact-form-card {
+    padding: 32px !important;
+    box-shadow: -8px 8px 0 var(--orange-500) !important;
+  }
+
+  .contact-mobile-circle {
+    margin-left: -12px;
+    margin-top: 16px;
   }
 }
 
@@ -2480,7 +2534,7 @@ h6 {
   }
 
   .brutalist-section {
-    padding: 60px 0 !important;
+    padding: 100px 0 60px !important;
   }
 
   .hide-on-mobile {
@@ -2603,36 +2657,7 @@ h6 {
 }
 
 
-@media (max-width: 900px) {
-  .mobile-break {
-    display: block !important;
-    content: '';
-    margin-top: 12px;
-  }
 
-  .hero-service-img {
-    width: 400px !important;
-    height: 400px !important;
-    opacity: 0.25 !important;
-    bottom: -5% !important;
-    right: -15% !important;
-    z-index: 0 !important;
-  }
-
-  .text-massive {
-    line-height: 1.4 !important;
-  }
-
-  .accent-circle {
-    margin-top: 12px;
-  }
-
-  .accent-circle::before {
-    width: 105%;
-    height: 115%;
-    border-width: 3px;
-  }
-}
 
 .mobile-break {
   display: none;

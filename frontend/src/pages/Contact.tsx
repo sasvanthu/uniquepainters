@@ -58,9 +58,9 @@ export default function Contact() {
               <div style={{ display: 'inline-block', border: 'var(--brutalist-border)', padding: '8px 16px', borderRadius: '50px', fontWeight: 800, marginBottom: '24px', background: 'var(--white)' }}>
                 CONTACT US
               </div>
-              <h1 className="text-massive" style={{ marginBottom: '24px', lineHeight: 1.1 }}>
+              <h1 className="text-massive contact-title" style={{ marginBottom: '24px', lineHeight: 1.1 }}>
                 Let's get in<br/>
-                <span className="accent-circle">touch.</span>
+                <span className="accent-circle contact-mobile-circle">touch.</span>
               </h1>
               <p style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--blue-900)', opacity: 0.8 }}>
                 Whether you need a free quote, a site inspection, or have a question about our services, our team is ready to help.
@@ -94,7 +94,7 @@ export default function Contact() {
           </div>
 
           {/* RIGHT COLUMN: THE FORM CARD */}
-          <div style={{ background: 'var(--blue-900)', border: 'var(--brutalist-border)', padding: '64px', boxShadow: '-16px 16px 0 var(--orange-500)', borderRadius: '24px' }}>
+          <div className="contact-form-card" style={{ background: 'var(--blue-900)', border: 'var(--brutalist-border)', padding: '64px', boxShadow: '-16px 16px 0 var(--orange-500)', borderRadius: '24px' }}>
             <h2 className="text-huge" style={{ marginBottom: '16px', color: 'var(--white)' }}>Request an Estimate</h2>
             <p style={{ fontSize: '1.25rem', fontWeight: 600, color: 'rgba(255,255,255,0.8)', marginBottom: '48px' }}>
               We typically respond within 2 hours.
