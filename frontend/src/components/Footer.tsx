@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <Link to="/">
               <img
-                src="https://uniquepainters.in/wp-content/uploads/2025/12/Final_header_2-removebg-preview.png"
+                src="https://uniquepainters.in/wp-content/uploads/2025/12/Final_header_2-removebg-preview.webp"
                 alt="Unique Painters – Commercial Painting Contractors Chennai"
                 className="footer-logo"
                 itemProp="logo"

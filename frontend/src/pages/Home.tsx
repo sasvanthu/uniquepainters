@@ -30,22 +30,22 @@ const SERVICES = [
 ];
 
 const BRANDS = [
-  { name: 'Asian Paints', logo: '/logos/asianpaints.png' },
-  { name: 'Nippon', logo: '/logos/nippon.png' },
-  { name: 'Berger', logo: '/logos/berger.png' },
-  { name: 'Birla Opus', logo: '/logos/birlaopus.png' },
-  { name: 'Nerolac', logo: '/logos/nerolac.png' },
-  { name: 'Dulux', logo: '/logos/dulux.png' },
-  { name: 'Dr. Fixit', logo: '/logos/drfixit.png' },
-  { name: 'Fosroc', logo: '/logos/fosroc.png' }
+  { name: 'Asian Paints', logo: '/logos/asianpaints.webp' },
+  { name: 'Nippon', logo: '/logos/nippon.webp' },
+  { name: 'Berger', logo: '/logos/berger.webp' },
+  { name: 'Birla Opus', logo: '/logos/birlaopus.webp' },
+  { name: 'Nerolac', logo: '/logos/nerolac.webp' },
+  { name: 'Dulux', logo: '/logos/dulux.webp' },
+  { name: 'Dr. Fixit', logo: '/logos/drfixit.webp' },
+  { name: 'Fosroc', logo: '/logos/fosroc.webp' }
 ];
 
 const PROJECTS = [
-  { title: 'Villa Interior', img: '/images/villa_interior.png' },
-  { title: 'Villa Exterior', img: '/images/villa_exterior.png' },
-  { title: 'Apartment Exterior', img: '/images/apartment_exterior.png' },
-  { title: 'Commercial Space', img: '/images/commercial_space.png' },
-  { title: 'Industrial Space', img: '/images/industrial_space.png' },
+  { title: 'Villa Interior', img: '/images/villa_interior.webp' },
+  { title: 'Villa Exterior', img: '/images/villa_exterior.webp' },
+  { title: 'Apartment Exterior', img: '/images/apartment_exterior.webp' },
+  { title: 'Commercial Space', img: '/images/commercial_space.webp' },
+  { title: 'Industrial Space', img: '/images/industrial_space.webp' },
 ];
 
 const PROCESS = [
@@ -72,7 +72,7 @@ export default function Home() {
         {/* Left Side: Commercial */}
         <div className="split-side split-left">
           <img
-            src="/images/image.png"
+            src="/images/image.webp"
             alt="Commercial Painting"
             className="split-image"
           />
@@ -101,7 +101,7 @@ export default function Home() {
             </Link>
           </div>
           <img
-            src="/images/image copy.png"
+            src="/images/image copy.webp"
             alt="Residential Painting"
             className="split-image"
           />

@@ -54,7 +54,7 @@ export default function Waterproofing() {
           </div>
         </div>
         <img 
-          src="/images/Gemini_Generated_Image_xl0hd2xl0hd2xl0h.png" 
+          src="/images/Gemini_Generated_Image_xl0hd2xl0hd2xl0h.webp" 
           alt="Waterproofing Services Chennai"
           className="hero-service-img"
         />

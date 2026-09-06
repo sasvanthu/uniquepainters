@@ -90,7 +90,7 @@ export default function About() {
           {/* Right Image */}
           <div style={{ minHeight: '600px', borderLeft: '4px solid var(--blue-900)' }}>
             <img 
-              src="/indian_painter_about.png" 
+              src="/indian_painter_about.webp" 
               alt="Indian Painters at Work" 
               style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
             />

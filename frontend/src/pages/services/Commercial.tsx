@@ -54,7 +54,7 @@ export default function Commercial() {
           </div>
         </div>
         <img 
-          src="/images/image.png" 
+          src="/images/image.webp" 
           alt="Commercial Painters Chennai"
           className="hero-service-img"
         />
