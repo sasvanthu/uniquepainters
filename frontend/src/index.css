@@ -2195,7 +2195,7 @@ h6 {
   }
 
   .vertical-slice {
-    height: 150px;
+    height: 200px;
     border-right: none;
     border-bottom: var(--brutalist-border);
   }
@@ -2206,7 +2206,20 @@ h6 {
 
   .vertical-slice:hover {
     flex: 1;
-    height: 250px;
+    height: 200px;
+  }
+
+  .vertical-slice img {
+    filter: grayscale(0%) contrast(1.1);
+  }
+
+  .vertical-slice .vertical-slice-title {
+    opacity: 1;
+    transform: translateY(0);
+    bottom: 16px;
+    left: 16px;
+    font-size: 0.9rem;
+    padding: 6px 12px;
   }
 
   .bento-grid {

@@ -41,11 +41,11 @@ const BRANDS = [
 ];
 
 const PROJECTS = [
-  { title: 'Modern Living', img: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop' },
-  { title: 'Villa Exterior', img: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop' },
-  { title: 'Corporate Office', img: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop' },
-  { title: 'Terrace Waterproof', img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=800&auto=format&fit=crop' },
-  { title: 'Commercial Build', img: 'https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=800&auto=format&fit=crop' },
+  { title: 'Villa Interior', img: '/images/villa_interior.png' },
+  { title: 'Villa Exterior', img: '/images/villa_exterior.png' },
+  { title: 'Apartment Exterior', img: '/images/apartment_exterior.png' },
+  { title: 'Commercial Space', img: '/images/commercial_space.png' },
+  { title: 'Industrial Space', img: '/images/industrial_space.png' },
 ];
 
 const PROCESS = [
@@ -139,7 +139,7 @@ export default function Home() {
             const cardColors = ['#ff7f50', '#14b8a6', '#fbbf24', '#a78bfa'];
             return (
               <div className="bento-item" key={s.title} style={{ background: cardColors[i], borderColor: '#082f49', color: '#082f49' }}>
-                <h3 style={{ fontSize: '3rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '-1px' }}>{s.title}</h3>
+                <h3 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '-1px' }}>{s.title}</h3>
                 <p style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '32px', lineHeight: 1.5 }}>{s.desc}</p>
                 <Link to={`/services/${s.anchor}`} className="btn-pill btn-black" style={{ display: 'inline-flex', padding: '12px 24px', fontSize: '1.1rem' }}>View Details</Link>
               </div>
@@ -366,7 +366,7 @@ export default function Home() {
               justifyContent: 'center',
               alignItems: 'center'
             }}>
-              <div style={{ fontSize: '5rem', fontWeight: 900, color: 'var(--blue-900)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>1000+</div>
+              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: 'var(--blue-900)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>1000+</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--blue-900)', lineHeight: 1.4, letterSpacing: '2px' }}>PROJECTS<br />COMPLETED</div>
             </div>
 
@@ -382,7 +382,7 @@ export default function Home() {
               justifyContent: 'center',
               alignItems: 'center'
             }}>
-              <div style={{ fontSize: '5rem', fontWeight: 900, color: 'var(--white)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>500+</div>
+              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: 'var(--white)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>500+</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--white)', lineHeight: 1.4, letterSpacing: '2px' }}>HAPPY<br />CLIENTS</div>
             </div>
 
@@ -398,7 +398,7 @@ export default function Home() {
               justifyContent: 'center',
               alignItems: 'center'
             }}>
-              <div style={{ fontSize: '5rem', fontWeight: 900, color: 'var(--white)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>100%</div>
+              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: 'var(--white)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>100%</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--orange-500)', lineHeight: 1.4, letterSpacing: '2px' }}>QUALITY<br />FOCUS</div>
             </div>
           </div>
