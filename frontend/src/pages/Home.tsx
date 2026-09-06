@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 
 const IconArrowRight = () => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M5 12h14M12 5l7 7-7 7" /></svg>
 );
 
 /* ─── Data ─── */
@@ -71,6 +71,11 @@ export default function Home() {
       <section className="split-hero" aria-label="Audience Portal">
         {/* Left Side: Commercial */}
         <div className="split-side split-left">
+          <img
+            src="/images/image.png"
+            alt="Commercial Painting"
+            className="split-image"
+          />
           <div className="split-content">
             <div className="split-eyebrow" style={{ color: '#FFD400' }}>For Businesses &amp; Contractors</div>
             <h1 className="split-title">Expert Commercial Painting</h1>
@@ -81,37 +86,34 @@ export default function Home() {
               Commercial Services <IconArrowRight />
             </Link>
           </div>
-          <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" 
-            alt="Commercial Painting"
-            className="split-image" 
-            style={{ borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}
-          />
         </div>
 
         {/* Right Side: Residential */}
         <div className="split-side split-right">
           <div className="split-content">
             <div className="split-eyebrow">For Homes &amp; Apartments</div>
-            <h1 className="split-title">Complete Residential Painting</h1>
-            <p className="split-desc">
+            <h1 className="split-title">Complete Residential Repainting</h1>
+            <p className="split-desc" style={{ textAlign: 'center' }}>
               Transform your living space with our premium interior, exterior, and waterproofing services. Perfect finishes, dust-free execution.
             </p>
-            <Link to="/services/interior" className="btn-pill btn-black" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+            <Link to="/services/interior" className="btn-pill btn-orange" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
               Residential Services <IconArrowRight />
             </Link>
           </div>
-          <img 
-            src="https://images.unsplash.com/photo-1562663474-6cbb3eaa4d14?q=80&w=800&auto=format&fit=crop" 
+          <img
+            src="/images/image copy.png"
             alt="Residential Painting"
-            className="split-image" 
-            style={{ borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.1)' }}
+            className="split-image"
           />
         </div>
 
         {/* Center Medallion */}
-        <div className="split-medallion" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        <div className="split-medallion" aria-label="Unique Painters Logo">
+          <img
+            src="https://uniquepainters.in/wp-content/uploads/2025/12/Final_header_2-removebg-preview.png"
+            alt="Unique Painters Logo"
+            style={{ width: '88%', height: '88%', objectFit: 'contain' }}
+          />
         </div>
 
         {/* Brands Ticker Strip */}
@@ -136,18 +138,97 @@ export default function Home() {
           {SERVICES.map((s, i) => {
             const cardColors = ['#ff7f50', '#14b8a6', '#fbbf24', '#a78bfa'];
             return (
-            <div className="bento-item" key={s.title} style={{ background: cardColors[i], borderColor: '#082f49', color: '#082f49' }}>
-              <h3 style={{ fontSize: '3rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '-1px' }}>{s.title}</h3>
-              <p style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '32px', lineHeight: 1.5 }}>{s.desc}</p>
-              <Link to={`/services/${s.anchor}`} className="btn-pill btn-black" style={{ display: 'inline-flex', padding: '12px 24px', fontSize: '1.1rem' }}>View Details</Link>
+              <div className="bento-item" key={s.title} style={{ background: cardColors[i], borderColor: '#082f49', color: '#082f49' }}>
+                <h3 style={{ fontSize: '3rem', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '-1px' }}>{s.title}</h3>
+                <p style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '32px', lineHeight: 1.5 }}>{s.desc}</p>
+                <Link to={`/services/${s.anchor}`} className="btn-pill btn-black" style={{ display: 'inline-flex', padding: '12px 24px', fontSize: '1.1rem' }}>View Details</Link>
+              </div>
+            )
+          })}
+        </div>
+      </section>
+
+      {/* ── 5. VERTICAL GALLERY ─────────────────────────────── */}
+      <section id="projects" className="brutalist-section" style={{ padding: '80px 0 0', background: 'var(--blue-900)' }}>
+        <div className="container" style={{ paddingBottom: '60px' }}>
+          <h2 className="text-huge" style={{ color: 'var(--white)' }}>Recent Projects</h2>
+          <p style={{ fontSize: '1.3rem', fontWeight: 600, color: 'rgba(255,255,255,0.8)' }}>A selection of our best work across Chennai.</p>
+        </div>
+        <div className="vertical-gallery">
+          {PROJECTS.map(p => (
+            <div className="vertical-slice" key={p.title}>
+              <img src={p.img} alt={p.title} loading="lazy" />
+              <div className="vertical-slice-title">{p.title}</div>
             </div>
-          )})}
+          ))}
+        </div>
+      </section>
+
+      {/* Separator */}
+      <div style={{ height: '8px', background: 'var(--blue-900)', width: '100%' }}></div>
+
+      {/* ── 6. PROCESS GRID (Restructured) ─────────────────── */}
+      <section id="process" className="brutalist-section" style={{ padding: '100px 0', background: '#f8fafc', borderBottom: '3px solid #1e1b4b', borderTop: '3px solid #1e1b4b' }}>
+        <div className="container">
+          <div style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '40px'
+          }}>
+
+            {/* The 6 steps */}
+            {PROCESS.map((step, index) => {
+              const bgColors = ['#fca5a5', '#fde047', '#86efac', '#93c5fd', '#c4b5fd', '#f9a8d4'];
+              const bgColor = bgColors[index % bgColors.length];
+              return (
+                <div key={step.num} style={{
+                  background: bgColor,
+                  border: '3px solid #1e1b4b',
+                  boxShadow: '8px 8px 0px #1e1b4b',
+                  borderRadius: '16px',
+                  padding: '40px 32px',
+                  position: 'relative',
+                  overflow: 'hidden',
+                  transition: 'transform 0.2s, box-shadow 0.2s',
+                  cursor: 'pointer'
+                }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.transform = 'translate(-4px, -4px)';
+                    e.currentTarget.style.boxShadow = '12px 12px 0px #1e1b4b';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.transform = 'translate(0, 0)';
+                    e.currentTarget.style.boxShadow = '8px 8px 0px #1e1b4b';
+                  }}
+                >
+                  <div style={{
+                    fontSize: '6rem',
+                    fontWeight: 900,
+                    color: '#1e1b4b',
+                    opacity: 0.1,
+                    position: 'absolute',
+                    top: '-15px',
+                    right: '10px',
+                    lineHeight: 1,
+                    letterSpacing: '-5px'
+                  }}>
+                    {step.num}
+                  </div>
+                  <div style={{ display: 'inline-block', background: '#1e1b4b', color: '#fff', padding: '8px 20px', borderRadius: '100px', fontWeight: 800, fontSize: '1.1rem', marginBottom: '32px' }}>
+                    STEP {step.num}
+                  </div>
+                  <h3 style={{ fontSize: '1.8rem', color: '#1e1b4b', marginBottom: '16px', fontWeight: 800, lineHeight: 1.2 }}>{step.title}</h3>
+                  <p style={{ fontSize: '1.15rem', color: '#1e1b4b', fontWeight: 600, lineHeight: 1.6 }}>{step.desc}</p>
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
 
       {/* ── 4. WHY WE ARE UNIQUE ────────────────────────────── */}
-      <section className="brutalist-section" style={{ 
-        padding: '100px 0', 
+      <section className="brutalist-section" style={{
+        padding: '100px 0',
         textAlign: 'center',
         background: '#0ea5e9', // Sky Blue 500
         color: '#ffffff',
@@ -217,84 +298,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 5. VERTICAL GALLERY ─────────────────────────────── */}
-      <section id="projects" className="brutalist-section" style={{ padding: '80px 0 0', background: 'var(--blue-900)' }}>
-        <div className="container" style={{ paddingBottom: '60px' }}>
-          <h2 className="text-huge" style={{ color: 'var(--white)' }}>Recent Projects</h2>
-          <p style={{ fontSize: '1.3rem', fontWeight: 600, color: 'rgba(255,255,255,0.8)' }}>A selection of our best work across Chennai.</p>
-        </div>
-        <div className="vertical-gallery">
-          {PROJECTS.map(p => (
-            <div className="vertical-slice" key={p.title}>
-              <img src={p.img} alt={p.title} loading="lazy" />
-              <div className="vertical-slice-title">{p.title}</div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Separator */}
-      <div style={{ height: '8px', background: 'var(--blue-900)', width: '100%' }}></div>
-
-      {/* ── 6. PROCESS GRID (Restructured) ─────────────────── */}
-      <section id="process" className="brutalist-section" style={{ padding: '100px 0', background: '#f8fafc', borderBottom: '3px solid #1e1b4b', borderTop: '3px solid #1e1b4b' }}>
-        <div className="container">
-          <div style={{ 
-            display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', 
-            gap: '40px' 
-          }}>
-
-            {/* The 6 steps */}
-            {PROCESS.map((step, index) => {
-              const bgColors = ['#fca5a5', '#fde047', '#86efac', '#93c5fd', '#c4b5fd', '#f9a8d4'];
-              const bgColor = bgColors[index % bgColors.length];
-              return (
-                <div key={step.num} style={{
-                  background: bgColor,
-                  border: '3px solid #1e1b4b',
-                  boxShadow: '8px 8px 0px #1e1b4b',
-                  borderRadius: '16px',
-                  padding: '40px 32px',
-                  position: 'relative',
-                  overflow: 'hidden',
-                  transition: 'transform 0.2s, box-shadow 0.2s',
-                  cursor: 'pointer'
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.transform = 'translate(-4px, -4px)';
-                  e.currentTarget.style.boxShadow = '12px 12px 0px #1e1b4b';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.transform = 'translate(0, 0)';
-                  e.currentTarget.style.boxShadow = '8px 8px 0px #1e1b4b';
-                }}
-                >
-                  <div style={{
-                    fontSize: '6rem',
-                    fontWeight: 900,
-                    color: '#1e1b4b',
-                    opacity: 0.1,
-                    position: 'absolute',
-                    top: '-15px',
-                    right: '10px',
-                    lineHeight: 1,
-                    letterSpacing: '-5px'
-                  }}>
-                    {step.num}
-                  </div>
-                  <div style={{ display: 'inline-block', background: '#1e1b4b', color: '#fff', padding: '8px 20px', borderRadius: '100px', fontWeight: 800, fontSize: '1.1rem', marginBottom: '32px' }}>
-                    STEP {step.num}
-                  </div>
-                  <h3 style={{ fontSize: '1.8rem', color: '#1e1b4b', marginBottom: '16px', fontWeight: 800, lineHeight: 1.2 }}>{step.title}</h3>
-                  <p style={{ fontSize: '1.15rem', color: '#1e1b4b', fontWeight: 600, lineHeight: 1.6 }}>{step.desc}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
       {/* ── 7. BRANDS ───────────────────────────────────────── */}
       <section className="brutalist-section block-dark" style={{ padding: '80px 0', textAlign: 'center' }}>
         <div className="container">
@@ -306,11 +309,11 @@ export default function Home() {
                   onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
                   onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
                 >
-                  <img 
-                    src={brand.logo} 
-                    alt={`${brand.name} logo`} 
-                    style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: '4px' }} 
-                    onError={(e) => e.currentTarget.style.display = 'none'} 
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: '4px' }}
+                    onError={(e) => e.currentTarget.style.display = 'none'}
                   />
                   <span style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--blue-900)' }}>
                     {brand.name}
@@ -324,11 +327,11 @@ export default function Home() {
                   onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
                   onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
                 >
-                  <img 
-                    src={brand.logo} 
-                    alt={`${brand.name} logo`} 
-                    style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: '4px' }} 
-                    onError={(e) => e.currentTarget.style.display = 'none'} 
+                  <img
+                    src={brand.logo}
+                    alt={`${brand.name} logo`}
+                    style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: '4px' }}
+                    onError={(e) => e.currentTarget.style.display = 'none'}
                   />
                   <span style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--blue-900)' }}>
                     {brand.name}
@@ -364,7 +367,7 @@ export default function Home() {
               alignItems: 'center'
             }}>
               <div style={{ fontSize: '5rem', fontWeight: 900, color: 'var(--blue-900)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>1000+</div>
-              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--blue-900)', lineHeight: 1.4, letterSpacing: '2px' }}>PROJECTS<br/>COMPLETED</div>
+              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--blue-900)', lineHeight: 1.4, letterSpacing: '2px' }}>PROJECTS<br />COMPLETED</div>
             </div>
 
             {/* Card 2 */}
@@ -380,7 +383,7 @@ export default function Home() {
               alignItems: 'center'
             }}>
               <div style={{ fontSize: '5rem', fontWeight: 900, color: 'var(--white)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>500+</div>
-              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--white)', lineHeight: 1.4, letterSpacing: '2px' }}>HAPPY<br/>CLIENTS</div>
+              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--white)', lineHeight: 1.4, letterSpacing: '2px' }}>HAPPY<br />CLIENTS</div>
             </div>
 
             {/* Card 3 */}
@@ -396,7 +399,7 @@ export default function Home() {
               alignItems: 'center'
             }}>
               <div style={{ fontSize: '5rem', fontWeight: 900, color: 'var(--white)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>100%</div>
-              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--orange-500)', lineHeight: 1.4, letterSpacing: '2px' }}>QUALITY<br/>FOCUS</div>
+              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--orange-500)', lineHeight: 1.4, letterSpacing: '2px' }}>QUALITY<br />FOCUS</div>
             </div>
           </div>
         </div>
