@@ -54,7 +54,7 @@ export default function Interior() {
           </div>
         </div>
         <img 
-          src="/blue-painters.png" 
+          src="/images/image copy.png" 
           alt="Interior Painters Chennai"
           className="hero-service-img"
         />
@@ -87,14 +87,14 @@ export default function Interior() {
           <h2 className="text-huge" style={{ marginBottom: '48px', color: 'var(--blue-900)' }}>Interior Painting Services We Offer</h2>
           <div className="responsive-grid-auto">
             <div style={{ border: 'var(--brutalist-border)', background: 'var(--white)', overflow: 'hidden', boxShadow: '8px 8px 0 var(--blue-900)' }}>
-              <img src="/indian_living_room.png" alt="Residential Indian Interior Painting" style={{ width: '100%', height: '300px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
+              <img src="/images/painter_living_room.png" alt="Residential Indian Interior Painting" style={{ width: '100%', height: '300px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
               <div style={{ padding: '40px' }}>
                 <h3 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '16px', color: 'var(--orange-500)' }}>Residential (Homes)</h3>
                 <p style={{ fontSize: '1.25rem', fontWeight: 500, lineHeight: 1.5 }}>Complete home painting services including all rooms, ceilings, and trims with premium finish and colour coordination.</p>
               </div>
             </div>
             <div style={{ border: 'var(--brutalist-border)', background: 'var(--white)', overflow: 'hidden', boxShadow: '8px 8px 0 var(--blue-900)' }}>
-              <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop" alt="Commercial Office Interior Painting" style={{ width: '100%', height: '300px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
+              <img src="/images/painter_office.png" alt="Commercial Office Interior Painting" style={{ width: '100%', height: '300px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
               <div style={{ padding: '40px' }}>
                 <h3 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '16px', color: 'var(--orange-500)' }}>Commercial Spaces</h3>
                 <p style={{ fontSize: '1.25rem', fontWeight: 500, lineHeight: 1.5 }}>Professional office painting with minimal disruption, creating productive and branded workspaces.</p>

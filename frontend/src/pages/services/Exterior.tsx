@@ -54,7 +54,7 @@ export default function Exterior() {
           </div>
         </div>
         <img 
-          src="https://images.unsplash.com/photo-1595844730298-b960fad97394?q=80&w=1200&auto=format&fit=crop" 
+          src="/images/Gemini_Generated_Image_l2xsvsl2xsvsl2xs.png" 
           alt="Exterior Painters Chennai"
           className="hero-service-img"
         />
@@ -66,21 +66,21 @@ export default function Exterior() {
           <h2 style={{ fontSize: '3rem', fontWeight: 900, color: 'var(--blue-900)', marginBottom: '16px', textTransform: 'uppercase' }}>Why Choose Us</h2>
           <div className="responsive-grid-auto" style={{ marginTop: '48px', textAlign: 'left' }}>
             <div style={{ background: 'var(--white)', border: 'var(--brutalist-border)', overflow: 'hidden', boxShadow: '8px 8px 0 var(--blue-900)' }}>
-              <img src="https://images.unsplash.com/photo-1595844730298-b960fad97394?q=80&w=800&auto=format&fit=crop" alt="Exterior Experts" style={{ width: '100%', height: '250px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
+              <img src="/images/exterior-expert.png" alt="Exterior Experts" style={{ width: '100%', height: '250px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
               <div style={{ padding: '32px' }}>
                 <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '12px', color: 'var(--orange-500)' }}>Exterior Experts</h3>
                 <p style={{ fontSize: '1.1rem', fontWeight: 600 }}>Specialized in villas & commercial buildings</p>
               </div>
             </div>
             <div style={{ background: 'var(--white)', border: 'var(--brutalist-border)', overflow: 'hidden', boxShadow: '8px 8px 0 var(--blue-900)' }}>
-              <img src="https://images.unsplash.com/photo-1518481612222-68bbe828ecd1?q=80&w=800&auto=format&fit=crop" alt="Climate-Resistant" style={{ width: '100%', height: '250px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
+              <img src="/images/climate-resistant.png" alt="Climate-Resistant" style={{ width: '100%', height: '250px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
               <div style={{ padding: '32px' }}>
                 <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '12px', color: 'var(--orange-500)' }}>Climate-Resistant</h3>
                 <p style={{ fontSize: '1.1rem', fontWeight: 600 }}>Paints built for heat & rain protection</p>
               </div>
             </div>
             <div style={{ background: 'var(--white)', border: 'var(--brutalist-border)', overflow: 'hidden', boxShadow: '8px 8px 0 var(--blue-900)' }}>
-              <img src="https://images.unsplash.com/photo-1605276374104-162f150bf228?q=80&w=800&auto=format&fit=crop" alt="Long-Lasting Finish" style={{ width: '100%', height: '250px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
+              <img src="/indian_painter_about.png" alt="Long-Lasting Finish" style={{ width: '100%', height: '250px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
               <div style={{ padding: '32px' }}>
                 <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '12px', color: 'var(--orange-500)' }}>Long-Lasting Finish</h3>
                 <p style={{ fontSize: '1.1rem', fontWeight: 600 }}>Crack-resistant & waterproof coatings</p>

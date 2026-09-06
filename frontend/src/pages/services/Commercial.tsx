@@ -54,7 +54,7 @@ export default function Commercial() {
           </div>
         </div>
         <img 
-          src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1200&auto=format&fit=crop" 
+          src="/images/image.png" 
           alt="Commercial Painters Chennai"
           className="hero-service-img"
         />
