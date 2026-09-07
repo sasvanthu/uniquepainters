@@ -131,7 +131,7 @@ export default function Home() {
         <div style={{ padding: '80px 5%' }}>
           <h2 className="text-huge" style={{ color: 'var(--white)', marginBottom: '16px' }}>Our Services</h2>
           <p style={{ fontSize: '1.3rem', maxWidth: '600px', color: 'rgba(255,255,255,0.8)' }}>
-            Seamless &amp; artistic painting solutions for your space.
+            Seamless &amp; artistic painting solutions for your space in Chennai.
           </p>
         </div>
         <div className="bento-grid" style={{ borderTopColor: '#082f49', borderLeftColor: '#082f49' }}>
@@ -366,7 +366,7 @@ export default function Home() {
               justifyContent: 'center',
               alignItems: 'center'
             }}>
-              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: 'var(--blue-900)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>1000+</div>
+              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: 'var(--blue-900)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>2000+</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--blue-900)', lineHeight: 1.4, letterSpacing: '2px' }}>PROJECTS<br />COMPLETED</div>
             </div>
 
@@ -382,7 +382,7 @@ export default function Home() {
               justifyContent: 'center',
               alignItems: 'center'
             }}>
-              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: 'var(--white)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>500+</div>
+              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: 'var(--white)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>2500+</div>
               <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--white)', lineHeight: 1.4, letterSpacing: '2px' }}>HAPPY<br />CLIENTS</div>
             </div>
 

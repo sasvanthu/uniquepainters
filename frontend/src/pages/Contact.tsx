@@ -85,8 +85,8 @@ export default function Contact() {
               <div style={{ background: 'var(--white)', border: 'var(--brutalist-border)', padding: '32px', boxShadow: '8px 8px 0 var(--blue-900)' }}>
                 <h3 style={{ fontSize: '1.25rem', fontWeight: 900, marginBottom: '16px' }}>Head Office</h3>
                 <address style={{ fontSize: '1.25rem', fontWeight: 700, fontStyle: 'normal', lineHeight: 1.6, color: 'var(--blue-900)' }}>
-                  No:12/460, Thiruverkadu Road, Vanagaram,<br/>
-                  Chennai, Tamilnadu - 600 095.
+                  No 6, Jayam Industrial Estate, 1st Main Rd,<br/>
+                  Chettiyar Agaram, Vanagaram, Chennai – 600116.
                 </address>
               </div>
             </div>

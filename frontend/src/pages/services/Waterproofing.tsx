@@ -42,7 +42,7 @@ export default function Waterproofing() {
               Waterproofing <br className="mobile-break" /><span className="accent-circle">Services</span>
             </h1>
             <p style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--blue-900)', marginBottom: '24px', maxWidth: '700px' }}>
-              Expert solutions for terraces, roofs, bathrooms, balconies, and external walls.
+              Expert solutions for terraces, roofs, bathrooms, balconies, and external walls in Chennai.
             </p>
             <div style={{ display: 'flex', gap: '24px', marginBottom: '48px', flexWrap: 'wrap' }}>
               <span style={{ fontSize: '1.25rem', fontWeight: 800, background: '#FFD400', padding: '8px 16px', border: '2px solid var(--blue-900)' }}>💧 100% Leak Protection</span>

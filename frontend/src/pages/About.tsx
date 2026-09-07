@@ -55,11 +55,11 @@ export default function About() {
               <div style={{ fontSize: '1.1rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--blue-900)', marginTop: '12px' }}>Years<br/>Experience</div>
             </div>
             <div style={{ background: 'var(--white)', padding: '40px 24px', border: 'var(--brutalist-border)', boxShadow: '8px 8px 0 var(--blue-900)' }}>
-              <div style={{ fontSize: '3.5rem', fontWeight: 900, color: 'var(--blue-900)', lineHeight: 1 }}>1000+</div>
+              <div style={{ fontSize: '3.5rem', fontWeight: 900, color: 'var(--blue-900)', lineHeight: 1 }}>2000+</div>
               <div style={{ fontSize: '1.1rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--blue-900)', marginTop: '12px' }}>Projects<br/>Completed</div>
             </div>
             <div style={{ background: 'var(--orange-500)', padding: '40px 24px', border: 'var(--brutalist-border)', boxShadow: '8px 8px 0 var(--blue-900)' }}>
-              <div style={{ fontSize: '3.5rem', fontWeight: 900, color: 'var(--white)', lineHeight: 1 }}>500+</div>
+              <div style={{ fontSize: '3.5rem', fontWeight: 900, color: 'var(--white)', lineHeight: 1 }}>2500+</div>
               <div style={{ fontSize: '1.1rem', fontWeight: 800, textTransform: 'uppercase', letterSpacing: '1px', color: 'var(--white)', marginTop: '12px' }}>Happy<br/>Clients</div>
             </div>
             <div style={{ background: 'var(--blue-900)', padding: '40px 24px', border: 'var(--brutalist-border)', boxShadow: '8px 8px 0 var(--orange-500)' }}>

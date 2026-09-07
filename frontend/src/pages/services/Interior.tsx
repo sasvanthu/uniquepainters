@@ -42,7 +42,7 @@ export default function Interior() {
               Interior Painting <br className="mobile-break" /><span className="accent-circle">Services</span>
             </h1>
             <p style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--blue-900)', marginBottom: '24px', maxWidth: '700px' }}>
-              Premium home & office painting with a flawless finish.
+              Premium home & office painting in Chennai with a flawless finish.
             </p>
             <div style={{ display: 'flex', gap: '24px', marginBottom: '48px', flexWrap: 'wrap' }}>
               <span style={{ fontSize: '1.25rem', fontWeight: 800, background: '#FFD400', padding: '8px 16px', border: '2px solid var(--blue-900)' }}>⭐ 4.9 Rating</span>

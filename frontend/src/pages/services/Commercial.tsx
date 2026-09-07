@@ -42,7 +42,7 @@ export default function Commercial() {
               Commercial Painting <br className="mobile-break" /><span className="accent-circle">Services</span>
             </h1>
             <p style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--blue-900)', marginBottom: '24px', maxWidth: '700px' }}>
-              Professional solutions for offices and commercial buildings with guaranteed quality.
+              Professional solutions for offices and commercial buildings in Chennai with guaranteed quality.
             </p>
             <div style={{ display: 'flex', gap: '24px', marginBottom: '48px', flexWrap: 'wrap' }}>
               <span style={{ fontSize: '1.25rem', fontWeight: 800, background: '#FFD400', padding: '8px 16px', border: '2px solid var(--blue-900)' }}>🏢 Specialists</span>

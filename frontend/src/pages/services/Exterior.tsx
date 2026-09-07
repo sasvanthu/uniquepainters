@@ -42,7 +42,7 @@ export default function Exterior() {
               Exterior Painting <br className="mobile-break" /><span className="accent-circle">Services</span>
             </h1>
             <p style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--blue-900)', marginBottom: '24px', maxWidth: '700px' }}>
-              Protect and beautify your building with weather-resistant painting.
+              Protect and beautify your building in Chennai with weather-resistant painting.
             </p>
             <div style={{ display: 'flex', gap: '24px', marginBottom: '48px', flexWrap: 'wrap' }}>
               <span style={{ fontSize: '1.25rem', fontWeight: 800, background: '#FFD400', padding: '8px 16px', border: '2px solid var(--blue-900)' }}>☀️ Weather-Proof</span>

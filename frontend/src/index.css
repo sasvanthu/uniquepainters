@@ -303,16 +303,16 @@ h6 {
   display: flex;
   align-items: center;
   transition: var(--transition);
-  background: #000000;
+  background: var(--blue-900);
 }
 
 .site-header.scrolled {
-  background: #000000;
+  background: var(--blue-900);
   box-shadow: 0 2px 16px rgba(0, 0, 0, .25);
 }
 
 .site-header.solid {
-  background: #000000;
+  background: var(--blue-900);
 }
 
 .header-inner {
@@ -2362,7 +2362,7 @@ h6 {
   transform: translate(-50%, -50%);
   width: 220px;
   height: 220px;
-  background: #000000;
+  background: var(--blue-900);
   border: 5px solid var(--white);
   border-radius: 50%;
   z-index: 10;
