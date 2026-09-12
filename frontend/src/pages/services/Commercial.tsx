@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import BrandsSection from '../../components/BrandsSection';
 
 const IconArrowRight = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -198,7 +199,10 @@ export default function Commercial() {
         </div>
       </section>
 
-      {/* ── 9. CTA ──────────────────────────────────────────── */}
+      {/* ── 9. BRANDS ───────────────────────────────────────── */}
+      <BrandsSection />
+
+      {/* ── 10. CTA ─────────────────────────────────────────── */}
       <section className="block-orange" style={{ padding: '100px 0', textAlign: 'center', borderTop: '4px solid var(--blue-900)' }}>
         <div className="container">
           <h2 className="text-massive" style={{ color: 'var(--blue-900)', marginBottom: '24px' }}>Ready to Upgrade?</h2>

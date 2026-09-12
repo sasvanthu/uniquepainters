@@ -27,7 +27,7 @@ export default function Header() {
           {/* Logo */}
           <Link to="/">
             <img
-              src="https://uniquepainters.in/wp-content/uploads/2025/12/Final_header_2-removebg-preview.png"
+              src="/logo.png"
               alt="Unique Painters – Commercial Painting Contractors Chennai"
               className="header-logo"
             />

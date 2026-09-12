@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import BrandsSection from '../components/BrandsSection';
 
 
 const IconArrowRight = () => (
@@ -29,16 +30,6 @@ const SERVICES = [
   },
 ];
 
-const BRANDS = [
-  { name: 'Asian Paints', logo: '/logos/asianpaints.webp' },
-  { name: 'Nippon', logo: '/logos/nippon.webp' },
-  { name: 'Berger', logo: '/logos/berger.webp' },
-  { name: 'Birla Opus', logo: '/logos/birlaopus.webp' },
-  { name: 'Nerolac', logo: '/logos/nerolac.webp' },
-  { name: 'Dulux', logo: '/logos/dulux.webp' },
-  { name: 'Dr. Fixit', logo: '/logos/drfixit.webp' },
-  { name: 'Fosroc', logo: '/logos/fosroc.webp' }
-];
 
 const PROJECTS = [
   { title: 'Villa Interior', img: '/images/villa_interior.webp' },
@@ -110,7 +101,7 @@ export default function Home() {
         {/* Center Medallion */}
         <div className="split-medallion" aria-label="Unique Painters Logo">
           <img
-            src="https://uniquepainters.in/wp-content/uploads/2025/12/Final_header_2-removebg-preview.png"
+            src="/logo.png"
             alt="Unique Painters Logo"
             style={{ width: '88%', height: '88%', objectFit: 'contain' }}
           />
@@ -299,107 +290,169 @@ export default function Home() {
       </section>
 
       {/* ── 7. BRANDS ───────────────────────────────────────── */}
-      <section className="brutalist-section block-dark" style={{ padding: '80px 0', textAlign: 'center' }}>
-        <div className="container">
-          <h2 className="text-huge" style={{ marginBottom: '40px', color: 'var(--white)' }}>Brands We Use</h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', alignItems: 'center' }}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
-              {BRANDS.slice(0, 5).map(brand => (
-                <div key={brand.name} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 24px', background: 'var(--white)', border: '1px solid rgba(13, 31, 51, 0.08)', borderRadius: '100px', boxShadow: '0 4px 12px rgba(0,0,0,0.03)', transition: 'transform 0.2s ease', cursor: 'pointer' }}
-                  onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
-                  onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
-                >
-                  <img
-                    src={brand.logo}
-                    alt={`${brand.name} logo`}
-                    style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: '4px' }}
-                    onError={(e) => e.currentTarget.style.display = 'none'}
-                  />
-                  <span style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--blue-900)' }}>
-                    {brand.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
-              {BRANDS.slice(5).map(brand => (
-                <div key={brand.name} style={{ display: 'flex', alignItems: 'center', gap: '12px', padding: '12px 24px', background: 'var(--white)', border: '1px solid rgba(13, 31, 51, 0.08)', borderRadius: '100px', boxShadow: '0 4px 12px rgba(0,0,0,0.03)', transition: 'transform 0.2s ease', cursor: 'pointer' }}
-                  onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-4px)'}
-                  onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
-                >
-                  <img
-                    src={brand.logo}
-                    alt={`${brand.name} logo`}
-                    style={{ width: '32px', height: '32px', objectFit: 'contain', borderRadius: '4px' }}
-                    onError={(e) => e.currentTarget.style.display = 'none'}
-                  />
-                  <span style={{ fontSize: '1.15rem', fontWeight: 800, color: 'var(--blue-900)' }}>
-                    {brand.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <BrandsSection />
 
-      {/* ── 8. TESTIMONIALS ─────────────────────────────────── */}
-      <section id="testimonials" className="brutalist-section block-yellow" style={{ padding: '100px 0' }}>
+      {/* ── 8. CLIENT FEEDBACK (FAQ THEME) ───────────────────── */}
+      <section id="testimonials" style={{ background: '#09090b', padding: '100px 0', borderTop: '3px solid #27272a' }}>
         <div className="container">
           <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 48px' }}>
-            <h2 className="text-huge" style={{ margin: 0, color: 'var(--blue-900)' }}>Client Feedback</h2>
-            <p style={{ fontSize: '1.1rem', color: 'var(--blue-900)', marginTop: '12px', fontWeight: 600, lineHeight: 1.6 }}>
-              Read what homeowners and commercial clients across Chennai say about our painting quality & service.
+            <h2 className="text-huge" style={{ margin: 0, color: '#f4f4f5', textTransform: 'uppercase', letterSpacing: '-2px' }}>
+              Client <span style={{ color: '#a3e635' }}>Feedback</span>
+            </h2>
+            <p style={{ fontSize: '1.25rem', color: '#a1a1aa', marginTop: '16px', fontWeight: 600, lineHeight: 1.6 }}>
+              Read what homeowners and commercial clients across Chennai say about our painting quality &amp; service.
             </p>
           </div>
 
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '32px' }}>
             {/* Card 1 */}
-            <div style={{
-              background: 'var(--white)',
-              border: '3px solid var(--blue-900)',
-              boxShadow: '10px 10px 0px var(--blue-900)',
-              padding: '60px 20px',
-              textAlign: 'center',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: 'var(--blue-900)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>2000+</div>
-              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--blue-900)', lineHeight: 1.4, letterSpacing: '2px' }}>PROJECTS<br />COMPLETED</div>
+            <div
+              style={{
+                background: '#18181b',
+                border: '3px solid #3f3f46',
+                boxShadow: '10px 10px 0px #a3e635',
+                borderRadius: '16px',
+                padding: '60px 20px',
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                transition: 'transform 0.2s, box-shadow 0.2s',
+                cursor: 'default'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translate(-4px, -4px)';
+                e.currentTarget.style.boxShadow = '14px 14px 0px #a3e635';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translate(0, 0)';
+                e.currentTarget.style.boxShadow = '10px 10px 0px #a3e635';
+              }}
+            >
+              <div style={{
+                background: '#a3e635',
+                color: '#09090b',
+                fontSize: '1.5rem',
+                fontWeight: 900,
+                width: '56px',
+                height: '56px',
+                borderRadius: '12px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+                border: '3px solid #09090b',
+                boxShadow: '4px 4px 0px #09090b'
+              }}>
+                1
+              </div>
+              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: '#a3e635', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>
+                2000+
+              </div>
+              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#f4f4f5', lineHeight: 1.4, letterSpacing: '2px' }}>
+                PROJECTS<br />COMPLETED
+              </div>
             </div>
 
             {/* Card 2 */}
-            <div style={{
-              background: 'var(--orange-500)',
-              border: '3px solid var(--blue-900)',
-              boxShadow: '10px 10px 0px var(--blue-900)',
-              padding: '60px 20px',
-              textAlign: 'center',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: 'var(--white)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>2500+</div>
-              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--white)', lineHeight: 1.4, letterSpacing: '2px' }}>HAPPY<br />CLIENTS</div>
+            <div
+              style={{
+                background: '#18181b',
+                border: '3px solid #3f3f46',
+                boxShadow: '10px 10px 0px #a3e635',
+                borderRadius: '16px',
+                padding: '60px 20px',
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                transition: 'transform 0.2s, box-shadow 0.2s',
+                cursor: 'default'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translate(-4px, -4px)';
+                e.currentTarget.style.boxShadow = '14px 14px 0px #a3e635';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translate(0, 0)';
+                e.currentTarget.style.boxShadow = '10px 10px 0px #a3e635';
+              }}
+            >
+              <div style={{
+                background: '#a3e635',
+                color: '#09090b',
+                fontSize: '1.5rem',
+                fontWeight: 900,
+                width: '56px',
+                height: '56px',
+                borderRadius: '12px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+                border: '3px solid #09090b',
+                boxShadow: '4px 4px 0px #09090b'
+              }}>
+                2
+              </div>
+              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: '#a3e635', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>
+                2500+
+              </div>
+              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#f4f4f5', lineHeight: 1.4, letterSpacing: '2px' }}>
+                HAPPY<br />CLIENTS
+              </div>
             </div>
 
             {/* Card 3 */}
-            <div style={{
-              background: 'var(--blue-900)',
-              border: '3px solid var(--blue-900)',
-              boxShadow: '10px 10px 0px var(--orange-500)',
-              padding: '60px 20px',
-              textAlign: 'center',
-              display: 'flex',
-              flexDirection: 'column',
-              justifyContent: 'center',
-              alignItems: 'center'
-            }}>
-              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: 'var(--white)', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>100%</div>
-              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: 'var(--orange-500)', lineHeight: 1.4, letterSpacing: '2px' }}>QUALITY<br />FOCUS</div>
+            <div
+              style={{
+                background: '#18181b',
+                border: '3px solid #3f3f46',
+                boxShadow: '10px 10px 0px #a3e635',
+                borderRadius: '16px',
+                padding: '60px 20px',
+                textAlign: 'center',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'center',
+                transition: 'transform 0.2s, box-shadow 0.2s',
+                cursor: 'default'
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translate(-4px, -4px)';
+                e.currentTarget.style.boxShadow = '14px 14px 0px #a3e635';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translate(0, 0)';
+                e.currentTarget.style.boxShadow = '10px 10px 0px #a3e635';
+              }}
+            >
+              <div style={{
+                background: '#a3e635',
+                color: '#09090b',
+                fontSize: '1.5rem',
+                fontWeight: 900,
+                width: '56px',
+                height: '56px',
+                borderRadius: '12px',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                marginBottom: '20px',
+                border: '3px solid #09090b',
+                boxShadow: '4px 4px 0px #09090b'
+              }}>
+                3
+              </div>
+              <div style={{ fontSize: 'clamp(3.5rem, 15vw, 5rem)', fontWeight: 900, color: '#a3e635', lineHeight: 1, marginBottom: '16px', letterSpacing: '-2px' }}>
+                100%
+              </div>
+              <div style={{ fontSize: '1.25rem', fontWeight: 800, color: '#f4f4f5', lineHeight: 1.4, letterSpacing: '2px' }}>
+                QUALITY<br />FOCUS
+              </div>
             </div>
           </div>
         </div>

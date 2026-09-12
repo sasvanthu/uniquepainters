@@ -1731,7 +1731,30 @@ h6 {
   }
 }
 
-/* --- WhatsApp Float --- */
+/* --- Floating Action Buttons (Call & WhatsApp) --- */
+.call-float {
+  position: fixed;
+  bottom: 148px;
+  right: 28px;
+  z-index: 990;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: var(--orange-500, #f26122);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 24px rgba(242, 97, 34, 0.4);
+  transition: var(--transition-fast);
+  text-decoration: none;
+}
+
+.call-float:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 32px rgba(242, 97, 34, 0.55);
+}
+
 .wa-float {
   position: fixed;
   bottom: 80px;
@@ -1754,6 +1777,9 @@ h6 {
 }
 
 @media (max-width: 1023px) {
+  .call-float {
+    bottom: 144px;
+  }
   .wa-float {
     bottom: 76px;
   }

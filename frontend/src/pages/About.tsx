@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import BrandsSection from '../components/BrandsSection';
 
 const IconArrowRight = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -114,7 +115,10 @@ export default function About() {
         </div>
       </section>
 
-      {/* ── 5. CTA ──────────────────────────────────────────── */}
+      {/* ── 5. BRANDS ───────────────────────────────────────── */}
+      <BrandsSection />
+
+      {/* ── 6. CTA ──────────────────────────────────────────── */}
       <section style={{ padding: '120px 0', textAlign: 'center', background: 'var(--orange-500)', borderTop: '4px solid var(--blue-900)' }}>
         <div className="container">
           <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(3rem, 8vw, 6rem)', fontWeight: 900, color: 'var(--blue-900)', textTransform: 'uppercase', marginBottom: '24px', lineHeight: 1 }}>

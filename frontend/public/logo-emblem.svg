@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100%" height="100%" fill="none">
+  <!-- Central Paint Roller Art -->
+  <g transform="translate(42, 22)">
+    <!-- Swash of paint -->
+    <path d="M10 24 C30 10, 70 8, 98 22 C110 28, 114 20, 116 16" stroke="#FFD400" stroke-width="7" stroke-linecap="round" fill="none"/>
+    
+    <!-- Roller Cylinder -->
+    <rect x="22" y="18" width="68" height="26" rx="7" fill="#F26122" stroke="#FFFFFF" stroke-width="2.5"/>
+    <rect x="28" y="22" width="14" height="18" rx="3" fill="#FFD400" opacity="0.85"/>
+    <rect x="48" y="22" width="28" height="18" rx="3" fill="#FF7F50" opacity="0.4"/>
+    
+    <!-- Roller Metal Frame -->
+    <path d="M90 31 L102 31 C105 31, 108 33, 108 37 L108 54 C108 58, 105 60, 102 60 L58 60 C55 60, 53 62, 53 66 L53 82" 
+          stroke="#FFFFFF" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          
+    <!-- Handle -->
+    <rect x="47" y="74" width="12" height="28" rx="4" fill="#FFD400" stroke="#FFFFFF" stroke-width="2.5"/>
+    
+    <!-- Fresh paint drip -->
+    <path d="M38 78 C38 78, 34 83, 34 86 C34 88.2, 35.8 90, 38 90 C40.2 90, 42 88.2, 42 86 C42 83, 38 78, 38 78 Z" fill="#F26122"/>
+  </g>
+
+  <!-- Typography Stacked for Medallion -->
+  <text x="100" y="142" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif" font-size="22" font-weight="900" letter-spacing="3" fill="#FFFFFF">
+    UNIQUE
+  </text>
+  <text x="100" y="165" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif" font-size="18" font-weight="900" letter-spacing="3.5" fill="#F26122">
+    PAINTERS
+  </text>
+  <text x="100" y="182" text-anchor="middle" font-family="'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif" font-size="8" font-weight="800" letter-spacing="3" fill="#FFD400">
+    CHENNAI • EST. 2013
+  </text>
+</svg>
