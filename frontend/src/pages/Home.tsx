@@ -66,28 +66,7 @@ const PROCESS = [
   { num: '06', title: 'Final Handover', desc: 'We hand over your beautifully painted space.' },
 ];
 
-const HERO_SHOWCASE = [
-  {
-    image: '/images/villa_interior.webp',
-    title: 'Villa Interior',
-    alt: 'Luxury Villa Interior Painting'
-  },
-  {
-    image: '/images/apartment_exterior.webp',
-    title: 'Apartment Exterior',
-    alt: 'Residential Apartment Exterior Painting'
-  },
-  {
-    image: '/images/commercial_space.webp',
-    title: 'Commercial Space',
-    alt: 'Commercial & Office Painting'
-  },
-  {
-    image: '/indian_living_room.webp',
-    title: 'Interior Finishes',
-    alt: 'Premium Living Room Finishes'
-  }
-];
+
 
 /* ═══════════════════════════════════════════════════════════ */
 /*  HOME PAGE (NEO-BRUTALIST REDESIGN)                         */
