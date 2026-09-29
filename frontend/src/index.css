@@ -2052,7 +2052,7 @@ h6 {
 
 .bento-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   border-top: var(--brutalist-border);
   border-left: var(--brutalist-border);
@@ -2061,21 +2061,52 @@ h6 {
 .bento-item {
   border-right: var(--brutalist-border);
   border-bottom: var(--brutalist-border);
-  padding: 48px;
+  padding: 40px 32px;
   background: var(--white);
-  transition: background 0.3s;
+  transition: background 0.3s, filter 0.2s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 }
 
 .bento-item:hover {
-  background: var(--gray-50);
+  filter: brightness(1.04);
 }
 
 .bento-item h3 {
-  font-size: 2.2rem;
-  font-weight: 800;
+  font-size: clamp(1.6rem, 2vw, 2.2rem);
+  font-weight: 900;
   letter-spacing: -0.02em;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   color: var(--blue-900);
+  line-height: 1.1;
+  text-transform: uppercase;
+}
+
+.bento-item p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 28px;
+  line-height: 1.45;
+  flex-grow: 1;
+}
+
+.bento-item .btn-pill {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+@media (max-width: 1200px) {
+  .bento-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Big Blocks */

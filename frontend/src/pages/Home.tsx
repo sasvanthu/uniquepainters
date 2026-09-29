@@ -142,12 +142,21 @@ export default function Home() {
         </div>
         <div className="bento-grid" style={{ borderTopColor: '#082f49', borderLeftColor: '#082f49' }}>
           {SERVICES.map((s, i) => {
-            const cardColors = ['#ff7f50', '#14b8a6', '#fbbf24', '#a78bfa', '#38bdf8'];
+            const cardColors = [
+              '#ff7f50', // Interior - Coral
+              '#14b8a6', // Exterior - Teal
+              '#fbbf24', // Commercial - Amber
+              '#a78bfa', // Waterproofing - Purple
+              '#38bdf8', // Warehouse Shed - Sky Blue
+              '#f97316', // Factory Structural - Orange
+              '#34d399', // Airless Spray - Mint
+              '#eab308', // Epoxy Flooring - Gold
+            ];
             return (
               <div className="bento-item" key={s.title} style={{ background: cardColors[i % cardColors.length], borderColor: '#082f49', color: '#082f49' }}>
-                <h3 style={{ fontSize: 'clamp(2rem, 8vw, 3rem)', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '-1px' }}>{s.title}</h3>
-                <p style={{ fontSize: '1.25rem', fontWeight: 700, marginBottom: '32px', lineHeight: 1.5 }}>{s.desc}</p>
-                <Link to={`/services/${s.anchor}`} className="btn-pill btn-black" style={{ display: 'inline-flex', padding: '12px 24px', fontSize: '1.1rem' }}>View Details</Link>
+                <h3 style={{ fontSize: 'clamp(1.6rem, 2vw, 2.3rem)', fontWeight: 900, textTransform: 'uppercase', letterSpacing: '-0.5px' }}>{s.title}</h3>
+                <p style={{ fontSize: '1.15rem', fontWeight: 600, marginBottom: '28px', lineHeight: 1.45, flexGrow: 1 }}>{s.desc}</p>
+                <Link to={`/services/${s.anchor}`} className="btn-pill btn-black" style={{ display: 'inline-flex', padding: '12px 24px', fontSize: '1.05rem', marginTop: 'auto', alignSelf: 'flex-start' }}>View Details</Link>
               </div>
             )
           })}
