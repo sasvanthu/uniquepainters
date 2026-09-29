@@ -109,96 +109,18 @@ export default function Home() {
   return (
     <article itemScope itemType="https://schema.org/WebPage">
 
-      {/* ── 1. PRO-RANGE HERO (MATCHING REFERENCE DESIGN) ─────────────── */}
-      <section className="pro-hero" aria-label="Unique Painters Home Banner">
-        {/* Subtle Luxury Mesh/Warm Tint Background */}
-        <div className="pro-hero-bg-texture" aria-hidden="true"></div>
-
-        <div className="pro-hero-body">
-          {/* Left Column: Official Logo, Vertical Scope, CTAs */}
-          <div className="pro-hero-left">
-            <div className="pro-hero-logo-container">
-              <img
-                src="/logo.png"
-                alt="Unique Painters Official Logo"
-                className="pro-hero-main-logo"
-              />
-            </div>
-
-            <h1 className="pro-hero-scope">
-              <span>PAINTING &amp;</span>
-              <span>RENOVATION</span>
-              <span>CONSTRUCTION</span>
-              <span>COMPANY</span>
-              <span className="scope-city">CHENNAI</span>
-            </h1>
-
-            <div className="pro-hero-ctas">
-              <Link to="/contact" className="pro-hero-btn-primary">
-                Get Free Estimate
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </Link>
-              <a href="tel:+917338882034" className="pro-hero-btn-secondary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                  <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-                </svg>
-                Call +91 73388 82034
-              </a>
-            </div>
-
-            <div className="pro-hero-checklist">
-              <div className="pro-hero-checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17l-5-5"/></svg>
-                <span>100% Dust-Free Mechanized Sanding</span>
-              </div>
-              <div className="pro-hero-checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17l-5-5"/></svg>
-                <span>1-Year Workmanship Warranty</span>
-              </div>
-              <div className="pro-hero-checklist-item">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3"><path d="M20 6L9 17l-5-5"/></svg>
-                <span>500+ Projects Handled in Chennai</span>
-              </div>
-            </div>
-          </div>
-
-          {/* Visual Stage: Painter on Left + Single Frame 4-Image Gradient Collage Behind */}
-          <div className="pro-hero-stage">
-            {/* Ambient Warm Gradient Glow */}
-            <div className="pro-collage-ambient-glow" aria-hidden="true"></div>
-
-            {/* Unified Single Frame Collage of the 4 Showcase Images */}
-            <div className="pro-hero-single-frame">
-              {/* Subtle continuous gradient sheen across the whole frame */}
-              <div className="pro-single-frame-sheen" aria-hidden="true"></div>
-
-              <div className="pro-single-frame-grid">
-                {HERO_SHOWCASE.map((item, idx) => (
-                  <div key={idx} className={`pro-frame-pane pro-frame-pane-${idx + 1}`}>
-                    <img src={item.image} alt={item.alt} />
-                    <div className="pro-frame-gradient-overlay"></div>
-                    {/* Seamless gradient split instead of a solid line */}
-                    {idx < HERO_SHOWCASE.length - 1 && (
-                      <div className="pro-frame-split" aria-hidden="true"></div>
-                    )}
-                    <span className="pro-gallery-pill">{item.title}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Foreground Hero Painter Positioned on the Left Side */}
-            <div className="pro-hero-painter-wrap">
-              <img
-                src="/images/hero_painter_cutout.png"
-                alt="Unique Painters Professional Craftsman"
-                className="pro-hero-painter"
-              />
-            </div>
-          </div>
-        </div>
+      {/* ── 1. FULL-BLEED HERO VIDEO (NO FRAME, FULL-WIDTH) ─────────────── */}
+      <section className="hero-video-full-section" aria-label="Unique Painters Video Showcase">
+        <video
+          className="hero-video-full"
+          src="/videos/unique_painters.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          poster="/images/hero-services-panorama-new.jpg"
+        />
 
         {/* Marquee Ticker Strip at Bottom */}
         <div className="pro-hero-ticker">

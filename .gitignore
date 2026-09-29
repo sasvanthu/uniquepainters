@@ -1,0 +1,6 @@
+# Ignore root raw media
+/Unique painters.mp4
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
