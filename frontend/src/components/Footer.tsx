@@ -48,6 +48,10 @@ export default function Footer() {
               <Link to="/services/exterior">Exterior Painting</Link>
               <Link to="/services/commercial">Commercial Painting</Link>
               <Link to="/services/waterproofing">Waterproofing</Link>
+              <Link to="/services/warehouse-shed-painting">Warehouse Shed Painting</Link>
+              <Link to="/services/factory-structural-painting">Factory Structural Painting</Link>
+              <Link to="/services/interior-airless-spray-painting">Interior Airless Spray Painting</Link>
+              <Link to="/services/epoxy-pu-flooring">Epoxy &amp; PU Flooring</Link>
             </nav>
           </div>
 

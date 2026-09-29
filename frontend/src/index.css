@@ -1780,6 +1780,7 @@ h6 {
   .call-float {
     bottom: 144px;
   }
+
   .wa-float {
     bottom: 76px;
   }
@@ -2261,228 +2262,574 @@ h6 {
 
 
 /* ----------------------------------------------------------- */
-/*  SPLIT HERO LAYOUT                                          */
+/* ----------------------------------------------------------- */
+/*  PRO-RANGE HERO SECTION (MATCHING REFERENCE DESIGN)         */
 /* ----------------------------------------------------------- */
 
-.split-hero {
+.pro-hero {
   position: relative;
   width: 100%;
-  height: 95vh;
-  min-height: 800px;
+  min-height: 94vh;
+  background-color: #F4EBE1;
+  background-image: 
+    radial-gradient(circle at 70% 30%, #FCF7F0 0%, #F5EAE0 45%, #EADBCC 100%);
   overflow: hidden;
   display: flex;
-  background: var(--gray-50);
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: calc(var(--header-h) + 12px);
 }
 
-.split-side {
+/* Subtle plaster / canvas grain effect */
+.pro-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(180, 150, 120, 0.08) 1px, transparent 0);
+  background-size: 24px 24px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pro-hero-body {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1520px;
+  margin: 0 auto;
+  padding: 20px 4% 30px;
+  display: grid;
+  grid-template-columns: 310px 1fr;
+  align-items: stretch;
+  min-height: 680px;
+}
+
+/* --- Left Column: Branding & Scope --- */
+.pro-hero-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 4;
+  padding-right: 20px;
+}
+
+/* Official Brand Logo Container */
+.pro-hero-logo-container {
+  margin-bottom: 22px;
+}
+
+.pro-hero-main-logo {
+  height: 88px;
+  width: auto;
+  max-width: 280px;
+  object-fit: contain;
+  object-position: left;
+  display: block;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.05));
+  transition: transform 0.25s;
+}
+
+.pro-hero-main-logo:hover {
+  transform: scale(1.02);
+}
+
+/* Scope Description (Matching reference vertical all-caps stack) */
+.pro-hero-scope {
+  font-family: var(--font-sans);
+  font-size: clamp(1.1rem, 1.5vw, 1.4rem);
+  font-weight: 800;
+  line-height: 1.35;
+  color: #242220;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 28px;
+}
+
+.pro-hero-scope span {
+  display: block;
+}
+
+.pro-hero-scope .scope-city {
+  color: #D94B34;
+  font-weight: 900;
+  display: inline-block;
+  border-bottom: 3px solid #D94B34;
+  margin-top: 4px;
+}
+
+/* Hero CTA Buttons */
+.pro-hero-ctas {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 290px;
+  margin-bottom: 24px;
+}
+
+.pro-hero-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #F26122;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 14px 24px;
+  border-radius: 9999px;
+  box-shadow: 0 8px 20px rgba(242, 97, 34, 0.35);
+  transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+  text-decoration: none;
+}
+
+.pro-hero-btn-primary:hover {
+  background: #D4521B;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 26px rgba(242, 97, 34, 0.45);
+}
+
+.pro-hero-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #1A1918;
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 12px 20px;
+  border-radius: 9999px;
+  transition: transform 0.2s, background 0.2s;
+  text-decoration: none;
+}
+
+.pro-hero-btn-secondary:hover {
+  background: #000000;
+  transform: translateY(-2px);
+}
+
+/* Trust checklist */
+.pro-hero-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #4A4642;
+}
+
+.pro-hero-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pro-hero-checklist-item svg {
+  color: #2D8A65;
+  flex-shrink: 0;
+}
+
+/* --- Right Visual Stage (Painter & Single Frame Gradient Collage) --- */
+.pro-hero-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 640px;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+/* Foreground Hero Painter positioned on the left side */
+.pro-hero-painter-wrap {
+  position: absolute;
+  bottom: 0;
+  left: -115px;
+  height: 98%;
+  max-height: 730px;
+  z-index: 10;
+  pointer-events: none;
+  display: flex;
+  align-items: flex-end;
+}
+
+.pro-hero-painter {
+  height: 100%;
+  width: auto;
+  max-width: 440px;
+  object-fit: contain;
+  object-position: bottom;
+  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.24));
+}
+
+/* Ambient Warm Glow behind the single frame */
+.pro-collage-ambient-glow {
+  position: absolute;
+  top: 6%;
+  left: 8%;
+  right: 2%;
+  bottom: 6%;
+  background: radial-gradient(
+    ellipse at 58% 50%,
+    rgba(242, 97, 34, 0.22) 0%,
+    rgba(255, 212, 0, 0.12) 35%,
+    rgba(45, 138, 101, 0.05) 65%,
+    transparent 80%
+  );
+  filter: blur(65px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* --- The Unified Single Frame Container --- */
+.pro-hero-single-frame {
+  position: absolute;
+  top: 30px;
+  bottom: 40px;
+  left: 95px;
+  right: 0;
+  border-radius: 28px;
+  overflow: hidden;
+  background: #1A1918;
+  border: 4px solid #FFFFFF;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.14), 0 4px 20px rgba(242, 97, 34, 0.1);
+  z-index: 2;
+  display: flex;
+}
+
+/* Overall horizontal gradient sheen across the single frame */
+.pro-single-frame-sheen {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(242, 97, 34, 0.1) 0%,
+    rgba(255, 212, 0, 0.04) 35%,
+    rgba(45, 138, 101, 0.04) 70%,
+    rgba(13, 31, 51, 0.18) 100%
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Flex Grid inside the Single Frame */
+.pro-single-frame-grid {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/* Each Image Pane in the Single Frame */
+.pro-frame-pane {
+  position: relative;
+  flex: 1;
+  height: 100%;
+  overflow: hidden;
+  border-right: none;
+  transition: flex 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  cursor: pointer;
+}
+
+/* Soft gradient blend zone on the right edge of each pane */
+.pro-frame-pane::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 48px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(13, 31, 51, 0.25) 40%,
+    rgba(242, 97, 34, 0.3) 70%,
+    rgba(13, 31, 51, 0.6) 100%
+  );
+  pointer-events: none;
+  z-index: 3;
+}
+
+/* Soft gradient blend zone on the left edge of subsequent panes */
+.pro-frame-pane:not(:first-child)::before {
+  content: '';
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  transition: clip-path 0.5s cubic-bezier(0.25, 1, 0.5, 1), transform 0.5s;
-  z-index: 1;
-}
-
-.split-left {
-  background: #E2E4E8;
-  color: var(--blue-900);
-  clip-path: polygon(0 0, 55% 0, 45% 100%, 0 100%);
-  align-items: flex-start;
-  text-align: left;
-  padding: 80px 45% 80px 8%;
-  justify-content: flex-end;
-}
-
-.split-right {
-  background: var(--blue-900);
-  color: var(--white);
-  clip-path: polygon(55% 0, 100% 0, 100% 100%, 45% 100%);
-  align-items: flex-end;
-  text-align: right;
-  padding: 80px 8% 80px 45%;
-}
-
-.split-right .split-title,
-.split-right .split-desc {
-  color: var(--white) !important;
-}
-
-.split-content {
-  max-width: 550px;
-  position: relative;
+  width: 48px;
+  background: linear-gradient(
+    90deg,
+    rgba(13, 31, 51, 0.6) 0%,
+    rgba(242, 97, 34, 0.3) 30%,
+    rgba(13, 31, 51, 0.25) 60%,
+    transparent 100%
+  );
+  pointer-events: none;
   z-index: 3;
 }
 
-.split-eyebrow {
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--orange-500);
-  margin-bottom: 16px;
-}
-
-.split-title {
-  font-family: var(--font-display);
-  font-size: clamp(1.5rem, 2.5vw, 3.2rem);
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 24px;
-  white-space: nowrap;
-}
-
-.split-desc {
-  font-size: 1.15rem;
-  font-weight: 500;
-  margin-bottom: 32px;
-  opacity: 0.9;
-  line-height: 1.6;
-}
-
-.split-image {
-  box-sizing: border-box;
+/* The Gradient Split (Replacing lines with a vibrant, luminous vertical gradient) */
+.pro-frame-split {
   position: absolute;
-  bottom: 80px;
-  width: 35%;
-  max-width: 480px;
-  aspect-ratio: 16/10;
-  object-fit: cover;
-  z-index: 2;
-  transition: transform 0.4s;
-}
-
-.split-left .split-image {
-  left: 8%;
-  top: 100px;
-  bottom: auto;
-  border: 16px solid var(--blue-900);
-  background-color: #F4F1EA;
-  padding: 12px;
-  border-radius: 28px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
-
-.split-right .split-image {
-  right: 8%;
-  bottom: 40px;
-  border: 16px solid #888d92;
-  background-color: #F4F1EA;
-  padding: 12px;
-  border-radius: 28px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-}
-
-.split-left:hover .split-image,
-.split-right:hover .split-image {
-  transform: translateY(-10px) scale(1.02);
-}
-
-.split-medallion {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 220px;
-  height: 220px;
-  background: var(--blue-900);
-  border: 5px solid var(--white);
-  border-radius: 50%;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--white);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
-  pointer-events: none;
-}
-
-.split-medallion svg,
-.split-medallion img {
-  width: 90%;
-  height: 90%;
-  object-fit: contain;
-}
-
-/* Brands Ticker in Hero */
-.hero-brands-strip {
-  position: absolute;
+  top: 0;
   bottom: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  right: -2px;
+  width: 4px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.15) 12%,
+    rgba(242, 97, 34, 0.8) 32%,
+    rgba(255, 212, 0, 0.95) 50%,
+    rgba(242, 97, 34, 0.8) 68%,
+    rgba(255, 255, 255, 0.15) 88%,
+    transparent 100%
+  );
+  box-shadow: 0 0 16px rgba(242, 97, 34, 0.6), 0 0 4px rgba(255, 212, 0, 0.6);
+  pointer-events: none;
+  z-index: 5;
+}
+
+.pro-frame-pane img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+/* Interactive Pane Expansion on Hover */
+.pro-single-frame-grid:hover .pro-frame-pane {
+  flex: 0.78;
+}
+
+.pro-single-frame-grid .pro-frame-pane:hover {
+  flex: 1.66;
+}
+
+.pro-frame-pane:hover img {
+  transform: scale(1.08);
+}
+
+/* Cinematic Gradient Effect Overlays on Each Pane */
+.pro-frame-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: 
+    linear-gradient(
+      180deg,
+      rgba(242, 97, 34, 0.12) 0%,
+      rgba(0, 0, 0, 0.02) 32%,
+      rgba(13, 31, 51, 0.35) 68%,
+      rgba(13, 31, 51, 0.84) 100%
+    );
+  pointer-events: none;
+  transition: background 0.35s ease, opacity 0.35s ease;
+  z-index: 2;
+}
+
+.pro-frame-pane:hover .pro-frame-gradient-overlay {
+  background: 
+    linear-gradient(
+      180deg,
+      rgba(242, 97, 34, 0.18) 0%,
+      rgba(0, 0, 0, 0.04) 30%,
+      rgba(13, 31, 51, 0.2) 65%,
+      rgba(13, 31, 51, 0.7) 100%
+    );
+}
+
+/* Elegant Luxury Pill Caption */
+.pro-gallery-pill {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(13, 31, 51, 0.86);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 8px 18px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  pointer-events: none;
+  z-index: 4;
+  white-space: nowrap;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.pro-frame-pane:hover .pro-gallery-pill {
+  background: #F26122;
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+/* Bottom Marquee Strip */
+.pro-hero-ticker {
+  position: relative;
   z-index: 10;
+  width: 100%;
+  height: 52px;
+  background: #1A1918;
   display: flex;
   align-items: center;
   overflow: hidden;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-.hero-brands-track {
+.pro-hero-ticker-track {
   display: flex;
-  gap: 40px;
-  animation: scrollLeft 30s linear infinite;
-  color: var(--white);
+  gap: 36px;
+  animation: scrollLeft 28s linear infinite;
+  color: #FFFFFF;
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1.05rem;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
   white-space: nowrap;
 }
 
+.pro-hero-ticker-track span {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.pro-hero-ticker-track span::after {
+  content: '★';
+  color: #F26122;
+  font-size: 0.8rem;
+}
+
+/* ── RESPONSIVE MEDIA QUERIES ── */
+@media (max-width: 1320px) {
+  .pro-hero-body {
+    grid-template-columns: 290px 1fr;
+  }
+  .pro-hero-single-frame {
+    left: 80px;
+  }
+  .pro-hero-painter-wrap {
+    left: -95px;
+  }
+  .pro-hero-painter {
+    max-width: 380px;
+  }
+}
+
+@media (max-width: 1120px) {
+  .pro-hero-body {
+    grid-template-columns: 270px 1fr;
+    min-height: 600px;
+  }
+  .pro-hero-single-frame {
+    left: 60px;
+  }
+  .pro-hero-painter-wrap {
+    left: -75px;
+    height: 94%;
+  }
+  .pro-hero-painter {
+    max-width: 330px;
+  }
+  .pro-gallery-pill {
+    bottom: 14px;
+    left: 14px;
+    font-size: 0.78rem;
+    padding: 6px 12px;
+  }
+}
+
 @media (max-width: 900px) {
-  .split-title {
-    white-space: normal;
+  .pro-hero {
+    min-height: auto;
+    padding-top: calc(var(--header-h) + 16px);
   }
 
-  .split-hero {
-    flex-direction: column;
-    height: auto;
+  .pro-hero-body {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    padding: 20px 20px 40px;
   }
 
-  .split-side {
-    position: relative;
-    width: 100%;
-    height: auto !important;
-    min-height: auto !important;
-    clip-path: none !important;
+  .pro-hero-left {
     text-align: center;
     align-items: center;
-    justify-content: center !important;
-    padding: 100px 24px !important;
+    padding-right: 0;
+  }
+
+  .pro-hero-main-logo {
+    margin: 0 auto;
+  }
+
+  .pro-hero-scope {
+    font-size: 1.15rem;
+    margin-bottom: 24px;
+  }
+
+  .pro-hero-ctas {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto 20px;
+  }
+
+  .pro-hero-checklist {
+    align-items: center;
+  }
+
+  .pro-hero-stage {
+    min-height: auto;
+    position: relative;
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    align-items: center;
+    overflow: visible;
   }
 
-  .split-left, .split-right {
-    clip-path: none;
+  .pro-hero-painter-wrap {
+    position: relative;
+    left: auto;
+    bottom: auto;
+    height: 350px;
+    margin: -25px auto 0;
+    z-index: 8;
   }
 
-  .split-image {
-    position: relative !important;
-    width: 90% !important;
-    max-width: 400px;
-    height: auto !important;
-    aspect-ratio: 16/10;
-    margin: 0 auto !important;
-    bottom: auto !important;
-    right: auto !important;
-    left: auto !important;
-    top: auto !important;
-    transform: none !important;
+  .pro-hero-painter {
+    max-width: 280px;
   }
 
-  .split-medallion {
-    width: 120px !important;
-    height: 120px !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
+  .pro-hero-single-frame {
+    position: relative;
+    left: auto;
+    right: auto;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    max-width: 480px;
+    height: 260px;
+    border-radius: 20px;
+    border-width: 3px;
+    z-index: 2;
+  }
+
+  .pro-gallery-pill {
+    bottom: 8px;
+    left: 8px;
+    font-size: 0.65rem;
+    padding: 4px 10px;
   }
 
   .mobile-break {
@@ -2531,6 +2878,7 @@ h6 {
     margin-top: 16px;
   }
 }
+
 
 
 

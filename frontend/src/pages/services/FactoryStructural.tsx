@@ -1,0 +1,283 @@
+import { Link } from 'react-router-dom';
+import BrandsSection from '../../components/BrandsSection';
+
+const IconArrowRight = () => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
+    <path d="M5 12h14M12 5l7 7-7 7"/>
+  </svg>
+);
+
+const UNIQUE = [
+  { 
+    title: 'Certified Industrial Coating Systems', 
+    desc: 'Application of high-performance epoxy primers, micaceous iron oxide (MIO) intermediates, and aliphatic polyurethane topcoats complying with ISO 12944 standards.' 
+  },
+  { 
+    title: 'Heavy Plant Rigging & Height Safety', 
+    desc: 'Certified scaffolding, scissor lifts, and fall arrest lifelines ensuring accident-free painting across high-bay factory structures, gantry cranes, and roof trusses.' 
+  },
+  { 
+    title: 'Plant Shutdown & Night Shift Painting', 
+    desc: 'Rapid-deployment teams working around your manufacturing cycles or during scheduled annual shutdowns with zero disruption to active plant lines.' 
+  },
+  { 
+    title: 'Machinery & Electrical Protection', 
+    desc: 'Meticulous isolation, heavy fire-retardant poly sheeting, and airtight masking protecting sensitive robotic arms, CNC equipment, and electrical busducts.' 
+  },
+  { 
+    title: 'Chemical & High-Temperature Resistance', 
+    desc: 'Specialized protective coatings resistant to acid vapors, moisture, corrosive chemicals, oil spills, and high operating temperatures.' 
+  },
+  { 
+    title: 'DFT & Adhesion Quality Certification', 
+    desc: 'Comprehensive quality assurance with digital Dry Film Thickness (DFT) gauges, cross-hatch adhesion tests, and full QA/QC documentation.' 
+  },
+];
+
+const REVIEWS = [
+  { 
+    name: 'Rajendra Prasad', 
+    title: 'DGM Maintenance, Sriperumbudur Auto Hub', 
+    desc: 'Unique Painters executed our factory steel structural painting over a 4-day annual shutdown. Their height safety standards and speed were exemplary.' 
+  },
+  { 
+    name: 'K. Senthil Nathan', 
+    title: 'Plant Engineering Head, Guindy Industrial Estate', 
+    desc: 'Excellent corrosion control on our gantry beams and structural trusses. The epoxy PU system has kept our plant looking spotless.' 
+  },
+  { 
+    name: 'Dinesh Karthik', 
+    title: 'Safety & EHS Officer, Oragadam', 
+    desc: 'Very impressive safety compliance. Every painter wore full PPE and certified harnesses. Work was completed with zero incidents.' 
+  },
+  { 
+    name: 'P. Ramanathan', 
+    title: 'General Manager, Maraimalai Nagar', 
+    desc: 'Clear DFT reporting, timely milestone handovers, and durable industrial finish. They are our go-to contractors for plant structures.' 
+  },
+];
+
+const FAQS = [
+  { 
+    q: 'Can you paint factory structures while production is running?', 
+    a: 'Yes. We utilize controlled containment zones with dust extraction and heavy-duty poly masking over machinery. For critical production areas, we schedule execution during third shifts, weekends, or plant shutdowns.' 
+  },
+  { 
+    q: 'How do you prepare structural steel before painting?', 
+    a: 'We degrease surfaces using industrial solvents, followed by mechanical wire brushing, power disc grinding (St 2 / St 3 standard), or abrasive blasting to remove mill scale, oxidation, and old peeling paint.' 
+  },
+  { 
+    q: 'Which paint system is recommended for factory structural steel?', 
+    a: 'We recommend a 3-tier industrial protective system: 1) Zinc-rich or zinc-phosphate epoxy primer (75-80 microns), 2) Epoxy high-build intermediate coat (100 microns), and 3) Aliphatic polyurethane (PU) finish coat (50-60 microns) for lasting UV and corrosion resistance.' 
+  },
+  { 
+    q: 'Do you provide pipe color coding as per industrial safety standards?', 
+    a: 'Yes. We provide complete pipeline and conduit color identification compliant with IS 2379 and OSHA standards (fire water, compressed air, chemicals, potable water, electrical conduit).' 
+  },
+  { 
+    q: 'Do you provide Dry Film Thickness (DFT) testing reports?', 
+    a: 'Yes. Our supervisors conduct calibrated digital DFT gauge measurements on every beam, column, and truss, providing complete QA/QC inspection reports upon handover.' 
+  },
+];
+
+export default function FactoryStructural() {
+  return (
+    <article style={{ background: 'var(--white)' }} className="animate-fade-in-up animate-delay-1">
+      {/* ── 1. HERO ─────────────────────────────────────────── */}
+      <section className="block-gray brutalist-section" style={{ position: 'relative', overflow: 'hidden', padding: '120px 0 60px' }}>
+        <div className="container" style={{ position: 'relative', zIndex: 2 }}>
+          <div style={{ maxWidth: '900px' }}>
+            <div style={{ display: 'inline-block', border: 'var(--brutalist-border)', padding: '8px 16px', borderRadius: '50px', fontWeight: 800, marginBottom: '24px', background: 'var(--white)' }}>
+              FACTORY STRUCTURAL PAINTING CHENNAI
+            </div>
+            <h1 className="text-massive" style={{ marginBottom: '24px' }}>
+              Factory Structural <br className="mobile-break" /><span className="accent-circle">Painting</span>
+            </h1>
+            <p style={{ fontSize: '1.5rem', fontWeight: 600, color: 'var(--blue-900)', marginBottom: '24px', maxWidth: '700px' }}>
+              High-performance anti-corrosive protective coating for factory steel trusses, gantry cranes, columns, and industrial infrastructure in Chennai.
+            </p>
+            <div style={{ display: 'flex', gap: '24px', marginBottom: '48px', flexWrap: 'wrap' }}>
+              <span style={{ fontSize: '1.25rem', fontWeight: 800, background: '#FFD400', padding: '8px 16px', border: '2px solid var(--blue-900)' }}>⚙️ ISO Standard Coatings</span>
+              <span style={{ fontSize: '1.25rem', fontWeight: 800, background: 'var(--white)', padding: '8px 16px', border: '2px solid var(--blue-900)' }}>🦺 100% Height Certified</span>
+              <span style={{ fontSize: '1.25rem', fontWeight: 800, background: '#a78bfa', color: '#082f49', padding: '8px 16px', border: '2px solid var(--blue-900)' }}>🏭 Shutdown Specialist</span>
+            </div>
+            <Link to="/contact" className="btn-pill btn-black" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+              Request Plant Assessment <IconArrowRight />
+            </Link>
+          </div>
+        </div>
+        <img 
+          src="/images/factory_structural_hero.jpg" 
+          alt="Factory Structural Painting Chennai"
+          className="hero-service-img"
+        />
+      </section>
+
+      {/* ── 2. QUICK BENEFITS ──────────────────────────────── */}
+      <section className="brutalist-section" style={{ background: '#FFD400', borderBottom: '4px solid var(--blue-900)', padding: '80px 0' }}>
+        <div className="container" style={{ textAlign: 'center' }}>
+          <h2 style={{ fontSize: '3rem', fontWeight: 900, color: 'var(--blue-900)', marginBottom: '16px', textTransform: 'uppercase' }}>
+            Why Choose Our Factory Structural Painting
+          </h2>
+          <div className="responsive-grid-auto" style={{ marginTop: '48px', textAlign: 'left' }}>
+            <div style={{ background: 'var(--white)', border: 'var(--brutalist-border)', overflow: 'hidden', boxShadow: '8px 8px 0 var(--blue-900)' }}>
+              <img src="/images/structural_steel_work.jpg" alt="Heavy Structural Steel Painting" style={{ width: '100%', height: '250px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
+              <div style={{ padding: '32px' }}>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '12px', color: 'var(--orange-500)' }}>Structural Steel Specialists</h3>
+                <p style={{ fontSize: '1.1rem', fontWeight: 600 }}>Overhead roof trusses, I-beams, gantry girders, and steel stanchions coated to exact micron specs.</p>
+              </div>
+            </div>
+            <div style={{ background: 'var(--white)', border: 'var(--brutalist-border)', overflow: 'hidden', boxShadow: '8px 8px 0 var(--blue-900)' }}>
+              <img src="/images/industrial_space.webp" alt="Anti-Corrosion Primers" style={{ width: '100%', height: '250px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
+              <div style={{ padding: '32px' }}>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '12px', color: 'var(--orange-500)' }}>Epoxy &amp; PU Barrier Systems</h3>
+                <p style={{ fontSize: '1.1rem', fontWeight: 600 }}>Multi-tier anti-rust primers protecting steel from chemical fumes, humidity, and thermal shock.</p>
+              </div>
+            </div>
+            <div style={{ background: 'var(--white)', border: 'var(--brutalist-border)', overflow: 'hidden', boxShadow: '8px 8px 0 var(--blue-900)' }}>
+              <img src="/images/commercial_space.webp" alt="Safety Standard Markings" style={{ width: '100%', height: '250px', objectFit: 'cover', borderBottom: 'var(--brutalist-border)' }} />
+              <div style={{ padding: '32px' }}>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 900, marginBottom: '12px', color: 'var(--orange-500)' }}>OSHA Safety Standards</h3>
+                <p style={{ fontSize: '1.1rem', fontWeight: 600 }}>High-visibility yellow safety warnings on crane beams, walkways, and color-coded utility pipe systems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 3. SERVICES WE OFFER ───────────────────────────── */}
+      <section className="brutalist-section" style={{ padding: '120px 0' }}>
+        <div className="container">
+          <h2 className="text-huge" style={{ marginBottom: '48px', color: 'var(--blue-900)' }}>Plant Structural Painting Scope</h2>
+          <div className="responsive-grid-auto">
+            <div style={{ border: 'var(--brutalist-border)', padding: '48px', background: 'var(--gray-50)' }}>
+              <h3 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '16px', color: 'var(--orange-500)' }}>Roof Trusses &amp; High-Bay Beams</h3>
+              <p style={{ fontSize: '1.25rem', fontWeight: 500, lineHeight: 1.5 }}>
+                Complete restoration and protective coating of complex overhead steel trusses, purlins, bracing rods, and high-bay lighting frameworks using airless spray technology.
+              </p>
+            </div>
+            <div style={{ border: 'var(--brutalist-border)', padding: '48px', background: 'var(--gray-50)' }}>
+              <h3 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '16px', color: 'var(--orange-500)' }}>Gantry Cranes &amp; Runway Girders</h3>
+              <p style={{ fontSize: '1.25rem', fontWeight: 500, lineHeight: 1.5 }}>
+                Heavy-duty epoxy and polyurethane coating on overhead crane runways, support columns, and gantry girders with certified safety yellow demarcation.
+              </p>
+            </div>
+            <div style={{ border: 'var(--brutalist-border)', padding: '48px', background: 'var(--gray-50)' }}>
+              <h3 style={{ fontSize: '2rem', fontWeight: 900, marginBottom: '16px', color: 'var(--orange-500)' }}>Industrial Pipe &amp; Tank Coating</h3>
+              <p style={{ fontSize: '1.25rem', fontWeight: 500, lineHeight: 1.5 }}>
+                Protective external painting of processing tanks, silos, steam pipes, fire pipelines, and industrial ductwork with specialized heat and chemical-resistant formulations.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 4. PROCESS ──────────────────────────────────────── */}
+      <section className="brutalist-section block-dark" style={{ padding: '120px 0' }}>
+        <div className="container">
+          <h2 className="text-huge" style={{ color: 'var(--white)', marginBottom: '48px' }}>Our Engineering Process</h2>
+          <div className="responsive-grid-auto">
+            {[
+              { t: 'Degreasing & Prep', d: 'Solvent wash of oils, grease, and power wire brushing to St 2/St 3 surface cleanliness.' },
+              { t: 'Epoxy Zinc Primer', d: 'Application of high-build zinc phosphate epoxy primer for cathode corrosion protection.' },
+              { t: 'Intermediate MIO Coat', d: 'Micaceous iron oxide barrier coat providing moisture and chemical shield.' },
+              { t: 'Aliphatic PU Finish', d: 'High-gloss chemical and UV resistant topcoat with dry film thickness (DFT) verification.' }
+            ].map((step, i) => (
+              <div key={i} style={{ border: 'var(--brutalist-border)', padding: '32px', position: 'relative', background: 'var(--white)', color: 'var(--blue-900)' }}>
+                <div style={{ position: 'absolute', top: '-20px', left: '20px', background: 'var(--orange-500)', color: 'var(--white)', padding: '4px 12px', fontWeight: 900, borderRadius: '20px', border: 'var(--brutalist-border)' }}>
+                  STEP {i + 1}
+                </div>
+                <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginTop: '16px', marginBottom: '12px' }}>{step.t}</h3>
+                <p style={{ fontSize: '1.1rem', fontWeight: 600 }}>{step.d}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 5. CONSULTATION / TECHNICAL BANNER ──────────────── */}
+      <section className="brutalist-section" style={{ padding: '100px 0', background: 'var(--orange-500)', borderBottom: '4px solid var(--blue-900)' }}>
+        <div className="container" style={{ textAlign: 'center', maxWidth: '850px' }}>
+          <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: 900, color: 'var(--blue-900)', marginBottom: '24px', textTransform: 'uppercase' }}>
+            Book Plant Structural Inspection &amp; DFT Audit
+          </h2>
+          <p style={{ fontSize: '1.25rem', fontWeight: 600, color: 'var(--white)', lineHeight: 1.5, marginBottom: '32px' }}>
+            Don’t let rust compromise your plant’s structural integrity. Our NACE/SSPC trained coating inspectors provide free on-site thickness assessment and technical paint specifications for Chennai factories.
+          </p>
+          <Link to="/contact" className="btn-pill btn-black" style={{ display: 'inline-flex', padding: '16px 32px', fontSize: '1.25rem' }}>
+            Book Technical Plant Audit
+          </Link>
+        </div>
+      </section>
+
+      {/* ── 6. WHY WE ARE UNIQUE ────────────────────────────── */}
+      <section style={{ padding: '100px 0', background: 'var(--white)' }}>
+        <div className="container">
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(3rem, 6vw, 5rem)', fontWeight: 900, color: 'var(--blue-900)', marginBottom: '48px', textTransform: 'uppercase' }}>
+            Why We Are Unique
+          </h2>
+          <div style={{ borderTop: '4px solid var(--blue-900)' }}>
+            {UNIQUE.map((item, idx) => (
+              <div className="swiss-row" key={idx} style={{ background: idx % 2 === 0 ? 'var(--gray-50)' : 'var(--white)', padding: '32px 0' }}>
+                <h3 className="swiss-row-title" style={{ fontSize: 'clamp(1.25rem, 3vw, 2rem)', color: idx % 2 === 0 ? 'var(--orange-500)' : 'var(--blue-900)' }}>{item.title}</h3>
+                <p className="swiss-row-desc" style={{ fontSize: '1.1rem' }}>{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 7. HAPPY CUSTOMERS (REVIEWS) ───────────────────── */}
+      <section className="brutalist-section block-gray" style={{ padding: '100px 0' }}>
+        <div className="container">
+          <h2 className="text-huge" style={{ marginBottom: '48px', color: 'var(--blue-900)' }}>Factory Client Feedback</h2>
+          <div className="responsive-grid-auto">
+            {REVIEWS.map((rev, idx) => (
+              <div key={idx} style={{ background: 'var(--white)', border: 'var(--brutalist-border)', padding: '32px', boxShadow: '6px 6px 0 var(--orange-500)', display: 'flex', flexDirection: 'column' }}>
+                <div style={{ color: '#FFD400', fontSize: '1.25rem', marginBottom: '12px' }}>★★★★★</div>
+                <h3 style={{ fontSize: '1.25rem', fontWeight: 900, color: 'var(--blue-900)', marginBottom: '12px' }}>{rev.title}</h3>
+                <p style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--gray-800)', flexGrow: 1, marginBottom: '20px' }}>"{rev.desc}"</p>
+                <div style={{ borderTop: '2px solid var(--gray-200)', paddingTop: '12px', fontWeight: 800, color: 'var(--blue-900)' }}>
+                  {rev.name}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 8. FAQ ACCORDION ───────────────────────────────── */}
+      <section className="brutalist-section" style={{ padding: '100px 0', background: 'var(--white)' }}>
+        <div className="container" style={{ maxWidth: '850px', margin: '0 auto' }}>
+          <h2 className="text-huge" style={{ marginBottom: '48px', color: 'var(--blue-900)', textAlign: 'center' }}>Frequently Asked Questions</h2>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            {FAQS.map((faq, idx) => (
+              <details key={idx} style={{ background: 'var(--gray-50)', border: 'var(--brutalist-border)', padding: '20px', cursor: 'pointer' }}>
+                <summary style={{ fontSize: '1.2rem', fontWeight: 800, color: 'var(--blue-900)', outline: 'none' }}>{faq.q}</summary>
+                <p style={{ marginTop: '12px', fontSize: '1.1rem', fontWeight: 500, color: 'var(--gray-800)', lineHeight: 1.5 }}>{faq.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── 9. BRANDS ───────────────────────────────────────── */}
+      <BrandsSection />
+
+      {/* ── 10. CTA ─────────────────────────────────────────── */}
+      <section className="block-orange" style={{ padding: '100px 0', textAlign: 'center', borderTop: '4px solid var(--blue-900)' }}>
+        <div className="container">
+          <h2 className="text-massive" style={{ color: 'var(--blue-900)', marginBottom: '24px' }}>Protect Your Factory Infrastructure</h2>
+          <p style={{ fontSize: '1.3rem', fontWeight: 700, color: 'var(--white)', marginBottom: '32px' }}>
+            Contact Chennai’s trusted industrial structural painting contractors for ISO-grade corrosion protection.
+          </p>
+          <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <Link to="/contact" className="btn-pill btn-black" style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', padding: '16px 32px' }}>
+              Request Plant Quotation <IconArrowRight />
+            </Link>
+          </div>
+        </div>
+      </section>
+    </article>
+  );
+}

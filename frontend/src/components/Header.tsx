@@ -46,6 +46,11 @@ export default function Header() {
                 <Link to="/services/exterior" className="dropdown-link">Exterior Painting</Link>
                 <Link to="/services/commercial" className="dropdown-link">Commercial Painting</Link>
                 <Link to="/services/waterproofing" className="dropdown-link">Waterproofing</Link>
+                <div style={{ height: '1px', background: 'rgba(0,0,0,0.08)', margin: '6px 0' }}></div>
+                <Link to="/services/warehouse-shed-painting" className="dropdown-link">Warehouse Shed Painting</Link>
+                <Link to="/services/factory-structural-painting" className="dropdown-link">Factory Structural Painting</Link>
+                <Link to="/services/interior-airless-spray-painting" className="dropdown-link">Interior Airless Spray Painting</Link>
+                <Link to="/services/epoxy-pu-flooring" className="dropdown-link">Epoxy &amp; PU Flooring</Link>
               </div>
             </div>
 
@@ -83,11 +88,16 @@ export default function Header() {
       <nav className={`mobile-nav${mobileOpen ? ' open' : ''}`} aria-label="Mobile navigation">
         <Link to="/"        className="nav-link">Home</Link>
         <div className="nav-link" style={{ paddingBottom: '4px', cursor: 'default' }}>Services:</div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', paddingLeft: '24px', marginBottom: '16px' }}>
-          <Link to="/services/interior" className="nav-link" style={{ fontSize: '1.2rem', padding: '4px 0' }}>Interior Painting</Link>
-          <Link to="/services/exterior" className="nav-link" style={{ fontSize: '1.2rem', padding: '4px 0' }}>Exterior Painting</Link>
-          <Link to="/services/commercial" className="nav-link" style={{ fontSize: '1.2rem', padding: '4px 0' }}>Commercial Painting</Link>
-          <Link to="/services/waterproofing" className="nav-link" style={{ fontSize: '1.2rem', padding: '4px 0' }}>Waterproofing</Link>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '6px', paddingLeft: '24px', marginBottom: '16px' }}>
+          <Link to="/services/interior" className="nav-link" style={{ fontSize: '1.1rem', padding: '2px 0' }}>Interior Painting</Link>
+          <Link to="/services/exterior" className="nav-link" style={{ fontSize: '1.1rem', padding: '2px 0' }}>Exterior Painting</Link>
+          <Link to="/services/commercial" className="nav-link" style={{ fontSize: '1.1rem', padding: '2px 0' }}>Commercial Painting</Link>
+          <Link to="/services/waterproofing" className="nav-link" style={{ fontSize: '1.1rem', padding: '2px 0' }}>Waterproofing</Link>
+          <div style={{ height: '1px', background: 'rgba(255,255,255,0.15)', margin: '4px 0' }}></div>
+          <Link to="/services/warehouse-shed-painting" className="nav-link" style={{ fontSize: '1.1rem', padding: '2px 0' }}>Warehouse Shed Painting</Link>
+          <Link to="/services/factory-structural-painting" className="nav-link" style={{ fontSize: '1.1rem', padding: '2px 0' }}>Factory Structural Painting</Link>
+          <Link to="/services/interior-airless-spray-painting" className="nav-link" style={{ fontSize: '1.1rem', padding: '2px 0' }}>Interior Airless Spray Painting</Link>
+          <Link to="/services/epoxy-pu-flooring" className="nav-link" style={{ fontSize: '1.1rem', padding: '2px 0' }}>Epoxy &amp; PU Flooring</Link>
         </div>
         <Link to="/about"   className="nav-link">About Us</Link>
         <Link to="/faq"     className="nav-link">FAQ</Link>

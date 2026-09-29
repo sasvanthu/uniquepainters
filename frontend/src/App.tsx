@@ -8,6 +8,10 @@ import Interior from './pages/services/Interior';
 import Exterior from './pages/services/Exterior';
 import Commercial from './pages/services/Commercial';
 import Waterproofing from './pages/services/Waterproofing';
+import WarehouseShed from './pages/services/WarehouseShed';
+import FactoryStructural from './pages/services/FactoryStructural';
+import InteriorAirlessSpray from './pages/services/InteriorAirlessSpray';
+import EpoxyPuFlooring from './pages/services/EpoxyPuFlooring';
 import FAQ from './pages/FAQ';
 import Contact from './pages/Contact';
 
@@ -66,10 +70,24 @@ export default function App() {
         <Routes>
           <Route path="/"        element={<Home />} />
           <Route path="/about"   element={<About />} />
-          <Route path="/services/interior" element={<Interior />} />
+          {/* Note services */}
+          <Route path="/services/warehouse-shed-painting" element={<WarehouseShed />} />
+          <Route path="/services/warehouse-shed" element={<WarehouseShed />} />
+          <Route path="/services/factory-structural-painting" element={<FactoryStructural />} />
+          <Route path="/services/factory-structural" element={<FactoryStructural />} />
+          <Route path="/services/interior-airless-spray-painting" element={<InteriorAirlessSpray />} />
+          <Route path="/services/interior-airless-spray" element={<InteriorAirlessSpray />} />
+          <Route path="/services/interior-spray" element={<InteriorAirlessSpray />} />
           <Route path="/services/exterior" element={<Exterior />} />
+          <Route path="/services/exterior-painting" element={<Exterior />} />
+          <Route path="/services/epoxy-pu-flooring" element={<EpoxyPuFlooring />} />
+          <Route path="/services/epoxy-flooring" element={<EpoxyPuFlooring />} />
+
+          {/* Existing service routes */}
+          <Route path="/services/interior" element={<Interior />} />
           <Route path="/services/commercial" element={<Commercial />} />
           <Route path="/services/waterproofing" element={<Waterproofing />} />
+          
           <Route path="/faq"     element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
