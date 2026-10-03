@@ -2302,7 +2302,7 @@ h6 {
   width: 100%;
   min-height: 94vh;
   background-color: #F4EBE1;
-  background-image: 
+  background-image:
     radial-gradient(circle at 70% 30%, #FCF7F0 0%, #F5EAE0 45%, #EADBCC 100%);
   overflow: hidden;
   display: flex;
@@ -2506,53 +2506,76 @@ h6 {
   left: 8%;
   right: 2%;
   bottom: 6%;
-  background: radial-gradient(
-    ellipse at 58% 50%,
-    rgba(242, 97, 34, 0.22) 0%,
-    rgba(255, 212, 0, 0.12) 35%,
-    rgba(45, 138, 101, 0.05) 65%,
-    transparent 80%
-  );
+  background: radial-gradient(ellipse at 58% 50%,
+      rgba(242, 97, 34, 0.22) 0%,
+      rgba(255, 212, 0, 0.12) 35%,
+      rgba(45, 138, 101, 0.05) 65%,
+      transparent 80%);
   filter: blur(65px);
   pointer-events: none;
   z-index: 1;
 }
 
 /* ----------------------------------------------------------- */
-/*  FULL-BLEED HERO VIDEO (NO FRAME, 100% EDGE-TO-EDGE)        */
+/* ----------------------------------------------------------- */
+/*  HERO VIDEO FRAME (EDGE-TO-EDGE, DISTINCT FRAME LAYER)     */
 /* ----------------------------------------------------------- */
 .hero-video-full-section {
   position: relative;
   width: 100%;
-  padding-top: var(--header-h, 72px);
+  height: calc(100vh - var(--header-h, 72px) - 52px);
+  height: calc(100dvh - var(--header-h, 72px) - 52px);
+  margin-top: var(--header-h, 72px);
   background: #000000;
   display: block;
   overflow: hidden;
-  margin: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  border: none;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 0;
+  padding: 0;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-video-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  background: #000000;
 }
 
 .hero-video-full {
   width: 100%;
-  height: auto;
+  height: 100%;
   max-width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: contain;
+  object-fit: cover;
+  object-position: center bottom;
   display: block;
   margin: 0;
   padding: 0;
   border: none;
-  border-radius: 0;
-  box-shadow: none;
   background: #000000;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 768px) {
   .hero-video-full-section {
-    padding-top: var(--header-h, 64px);
+    height: auto;
+    min-height: 0;
+    margin-top: var(--header-h, 64px);
+    aspect-ratio: 16 / 9;
+  }
+  .hero-video-container {
+    height: 100%;
+    aspect-ratio: 16 / 9;
+  }
+  .hero-video-full {
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    object-position: center bottom;
   }
 }
 
@@ -2589,26 +2612,23 @@ h6 {
 .pro-hero-video-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(13, 31, 51, 0.1) 0%,
-    transparent 50%,
-    rgba(13, 31, 51, 0.55) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(13, 31, 51, 0.1) 0%,
+      transparent 50%,
+      rgba(13, 31, 51, 0.55) 100%);
   pointer-events: none;
   z-index: 4;
 }
 
 .pro-hero-video-controls {
   position: absolute;
-  bottom: 20px;
-  left: 24px;
-  right: 24px;
+  top: 20px;
+  left: 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  gap: 12px;
   z-index: 6;
-  pointer-events: none;
+  pointer-events: auto;
 }
 
 .pro-hero-video-badge {
@@ -2639,10 +2659,13 @@ h6 {
 }
 
 @keyframes pulseLiveDot {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }
+
   50% {
     transform: scale(1.35);
     opacity: 0.6;
@@ -2685,13 +2708,11 @@ h6 {
 .pro-single-frame-sheen {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(242, 97, 34, 0.1) 0%,
-    rgba(255, 212, 0, 0.04) 35%,
-    rgba(45, 138, 101, 0.04) 70%,
-    rgba(13, 31, 51, 0.18) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(242, 97, 34, 0.1) 0%,
+      rgba(255, 212, 0, 0.04) 35%,
+      rgba(45, 138, 101, 0.04) 70%,
+      rgba(13, 31, 51, 0.18) 100%);
   pointer-events: none;
   z-index: 3;
 }
@@ -2722,13 +2743,11 @@ h6 {
   bottom: 0;
   right: 0;
   width: 48px;
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(13, 31, 51, 0.25) 40%,
-    rgba(242, 97, 34, 0.3) 70%,
-    rgba(13, 31, 51, 0.6) 100%
-  );
+  background: linear-gradient(90deg,
+      transparent 0%,
+      rgba(13, 31, 51, 0.25) 40%,
+      rgba(242, 97, 34, 0.3) 70%,
+      rgba(13, 31, 51, 0.6) 100%);
   pointer-events: none;
   z-index: 3;
 }
@@ -2741,13 +2760,11 @@ h6 {
   bottom: 0;
   left: 0;
   width: 48px;
-  background: linear-gradient(
-    90deg,
-    rgba(13, 31, 51, 0.6) 0%,
-    rgba(242, 97, 34, 0.3) 30%,
-    rgba(13, 31, 51, 0.25) 60%,
-    transparent 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(13, 31, 51, 0.6) 0%,
+      rgba(242, 97, 34, 0.3) 30%,
+      rgba(13, 31, 51, 0.25) 60%,
+      transparent 100%);
   pointer-events: none;
   z-index: 3;
 }
@@ -2759,16 +2776,14 @@ h6 {
   bottom: 0;
   right: -2px;
   width: 4px;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    rgba(255, 255, 255, 0.15) 12%,
-    rgba(242, 97, 34, 0.8) 32%,
-    rgba(255, 212, 0, 0.95) 50%,
-    rgba(242, 97, 34, 0.8) 68%,
-    rgba(255, 255, 255, 0.15) 88%,
-    transparent 100%
-  );
+  background: linear-gradient(180deg,
+      transparent 0%,
+      rgba(255, 255, 255, 0.15) 12%,
+      rgba(242, 97, 34, 0.8) 32%,
+      rgba(255, 212, 0, 0.95) 50%,
+      rgba(242, 97, 34, 0.8) 68%,
+      rgba(255, 255, 255, 0.15) 88%,
+      transparent 100%);
   box-shadow: 0 0 16px rgba(242, 97, 34, 0.6), 0 0 4px rgba(255, 212, 0, 0.6);
   pointer-events: none;
   z-index: 5;
@@ -2799,28 +2814,24 @@ h6 {
 .pro-frame-gradient-overlay {
   position: absolute;
   inset: 0;
-  background: 
-    linear-gradient(
-      180deg,
+  background:
+    linear-gradient(180deg,
       rgba(242, 97, 34, 0.12) 0%,
       rgba(0, 0, 0, 0.02) 32%,
       rgba(13, 31, 51, 0.35) 68%,
-      rgba(13, 31, 51, 0.84) 100%
-    );
+      rgba(13, 31, 51, 0.84) 100%);
   pointer-events: none;
   transition: background 0.35s ease, opacity 0.35s ease;
   z-index: 2;
 }
 
 .pro-frame-pane:hover .pro-frame-gradient-overlay {
-  background: 
-    linear-gradient(
-      180deg,
+  background:
+    linear-gradient(180deg,
       rgba(242, 97, 34, 0.18) 0%,
       rgba(0, 0, 0, 0.04) 30%,
       rgba(13, 31, 51, 0.2) 65%,
-      rgba(13, 31, 51, 0.7) 100%
-    );
+      rgba(13, 31, 51, 0.7) 100%);
 }
 
 /* Elegant Luxury Pill Caption */
@@ -2853,17 +2864,19 @@ h6 {
   transform: translateY(-2px);
 }
 
-/* Bottom Marquee Strip */
+/* Bottom Marquee Strip - The End of the Hero Frame */
 .pro-hero-ticker {
   position: relative;
   z-index: 10;
   width: 100%;
   height: 52px;
-  background: #1A1918;
+  background: #111110;
   display: flex;
   align-items: center;
   overflow: hidden;
-  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  flex-shrink: 0;
 }
 
 .pro-hero-ticker-track {
@@ -2896,12 +2909,15 @@ h6 {
   .pro-hero-body {
     grid-template-columns: 290px 1fr;
   }
+
   .pro-hero-single-frame {
     left: 80px;
   }
+
   .pro-hero-painter-wrap {
     left: -95px;
   }
+
   .pro-hero-painter {
     max-width: 380px;
   }
@@ -2912,16 +2928,20 @@ h6 {
     grid-template-columns: 270px 1fr;
     min-height: 600px;
   }
+
   .pro-hero-single-frame {
     left: 60px;
   }
+
   .pro-hero-painter-wrap {
     left: -75px;
     height: 94%;
   }
+
   .pro-hero-painter {
     max-width: 330px;
   }
+
   .pro-gallery-pill {
     bottom: 14px;
     left: 14px;

@@ -88,28 +88,30 @@ export default function Home() {
   return (
     <article itemScope itemType="https://schema.org/WebPage">
 
-      {/* ── 1. FULL-BLEED HERO VIDEO (NO FRAME, FULL-WIDTH) ─────────────── */}
+      {/* ── 1. FULL-BLEED HERO VIDEO (ALL EDGES FULL-BLEED) ─────────────── */}
       <section className="hero-video-full-section" aria-label="Unique Painters Video Showcase">
-        <video
-          className="hero-video-full"
-          src="/videos/unique_painters.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          preload="auto"
-          poster="/images/hero-services-panorama-new.jpg"
-        />
-
-        {/* Marquee Ticker Strip at Bottom */}
-        <div className="pro-hero-ticker">
-          <div className="pro-hero-ticker-track">
-            {allItems.map((brand, i) => (
-              <span key={i}>{brand}</span>
-            ))}
-          </div>
+        <div className="hero-video-container">
+          <video
+            className="hero-video-full"
+            src="/videos/unique_painters.mp4"
+            autoPlay
+            loop
+            muted
+            playsInline
+            preload="auto"
+            poster="/images/hero-services-panorama-new.jpg"
+          />
         </div>
       </section>
+
+      {/* ── 2. ROLLING TAGLINE (END OF THE HERO FRAME) ────────── */}
+      <div className="pro-hero-ticker" aria-label="Unique Painters Services Ticker">
+        <div className="pro-hero-ticker-track">
+          {allItems.map((brand, i) => (
+            <span key={i}>{brand}</span>
+          ))}
+        </div>
+      </div>
 
       {/* ── 3. SERVICES (BENTO GRID) ────────────────────────── */}
       <section id="services" className="brutalist-section block-dark" style={{ padding: 0 }}>
